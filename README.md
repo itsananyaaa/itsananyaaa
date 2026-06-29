@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=9D4EDD&center=true&vCenter=true&width=750&lines=Computer+Science+%40+Christ+College+of+Engineering;5%C3%97+Intern+%7C+Patent+Holder+%7C+IIT+Kanpur+Hackathon+Runner-Up;AI+%2F+ML+%7C+Full-Stack+%7C+Computer+Vision;9.94+CGPA+%E2%80%94+and+still+debugging+at+2+AM+%F0%9F%8C%99)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=9D4EDD&center=true&vCenter=true&width=750&lines=Computer+Science+%40+Christ+College+of+Engineering;5%C3%97+Intern+%7C+Patent+Holder+%7C+IIT+Kanpur+Hackathon+Runner-Up;AI+%2F+ML+%7C+Full-Stack+%7C+Computer+Vision;+Still+debugging+at+2+AM+%F0%9F%8C%99)](https://git.io/typing-svg)
 
 <br/>
 
