@@ -59,7 +59,7 @@ class Ananya:
 
 |  | |
 |:---:|:---:|
-| 🏅 **9.94 / 10 CGPA** | 📜 **Indian Patent Filed (Apr 2026)** |
+| 🏅 **9.87 / 10 CGPA** | 📜 **Indian Patent Filed (Apr 2026)** |
 | 🥈 **Runner-Up @ IIT Kanpur Hackathon** | 💼 **5× Technical Intern** |
 | 🏆 **Debate Winner (SYNAPSE)** | 🛰️ **Shortlisted — Smart India Hackathon 2025** |
 
