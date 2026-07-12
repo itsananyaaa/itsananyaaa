@@ -110,7 +110,7 @@ class Ananya:
 ## 💼 Experience
 
 <details>
-<summary><b>🟣 AI/ML Intern — Govt. Engineering College Thrissur (Jun 2026 · Upcoming)</b></summary>
+<summary><b>🟣 AI/ML Intern — Govt. Engineering College Thrissur (Jun 2026)</b></summary>
 <br/>
 Selected for GECT's Summer Internship Programme 2026. Joining the AI/ML track for hands-on applied research experience.
 </details>
