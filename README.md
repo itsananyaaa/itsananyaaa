@@ -27,7 +27,7 @@ class Ananya:
     name       = "Ananya Biju"
     location   = "Thrissur, Kerala, India 🌴"
     education  = "B.Tech CSE @ Christ College of Engineering"
-    cgpa       = 9.94   # yes, really
+    cgpa       = 9.87   # yes, really
     pronouns   = "she/her"
 
     internships = 5       # and counting
@@ -39,6 +39,7 @@ class Ananya:
         "Full-Stack Development",
         "Cybersecurity Fundamentals",
         "That one bug that shouldn't exist but does",
+        "books, books and more books!",
     ]
 
     def mission(self) -> str:
