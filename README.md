@@ -27,7 +27,7 @@ class Ananya:
     name       = "Ananya Biju"
     location   = "Thrissur, Kerala, India 🌴"
     education  = "B.Tech CSE @ Christ College of Engineering"
-    cgpa       = 9.87   # yes, really
+    cgpa       = 9.91   # yes, really
     pronouns   = "she/her"
 
     internships = 5       # and counting
