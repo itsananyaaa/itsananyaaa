@@ -271,6 +271,6 @@ while alive:
 
 *Open to internships, collaborations, and conversations about ideas that shouldn't work but somehow do.*
 
-⭐ If something here sparked your interest — let's talk!
+⭐ If something here sparked your interest, come on — let's talk!
 
 </div>
