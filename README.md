@@ -40,6 +40,7 @@ class Ananya:
         "Cybersecurity Fundamentals",
         "That one bug that shouldn't exist but does",
         "books, books and more books!",
+        "leetcode"
     ]
 
     def mission(self) -> str:
