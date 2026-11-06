@@ -1,278 +1,277 @@
-# The Crimson Archive
+<div align="center">
 
-**A classified collection of ideas, experiments and engineered realities.**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,25&height=200&section=header&text=Ananya%20Biju&fontSize=60&fontAlignY=38&animation=fadeIn&fontColor=ffffff&desc=Building%20things%20that%20matter%20%E2%80%94%20with%20code%2C%20curiosity%2C%20and%20way%20too%20much%20coffee&descAlignY=60&descSize=16"/>
 
-Ananya Biju. Computer science and engineering, Christ College of Engineering, Irinjalakuda. The work below is the part that can be opened: studies, systems, and a patent application that has been filed and not granted.
+<br/>
 
-## The Grimoire
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=9D4EDD&center=true&vCenter=true&width=750&lines=Computer+Science+%40+Christ+College+of+Engineering;5%C3%97+Intern+%7C+Patent+Holder+%7C+IIT+Kanpur+Hackathon+Runner-Up;AI+%2F+ML+%7C+Full-Stack+%7C+Computer+Vision;+Still+debugging+at+2+AM+%F0%9F%8C%99)](https://git.io/typing-svg)
 
-<p align="center">
-  <img src="assets/hero.svg" alt="An open leather-bound book titled The Crimson Archive. The left page is a personal file for Ananya Biju, computer science, 2024 to 2028, Irinjalakuda. The right page reads: The world is full of things that have not yet been built." width="100%">
-</p>
+<br/>
 
-> The world is full of things that have not yet been built.
+[![Profile Views](https://komarev.com/ghpvc/?username=itsananyaaa&style=for-the-badge&color=9D4EDD&label=PROFILE+VIEWS)](https://github.com/itsananyaaa)
+[![GitHub followers](https://img.shields.io/github/followers/itsananyaaa?style=for-the-badge&color=9D4EDD&logo=github)](https://github.com/itsananyaaa)
 
-<p align="center">
-  <img src="assets/rule.svg" alt="" width="100%">
-</p>
+</div>
 
-## The Archive Index
+---
 
-This is a record, not an introduction.
+## `> whoami`
 
-| | |
-| --- | --- |
-| Name | Ananya Biju |
-| Programme | B.Tech Computer Science and Engineering, 2024–2028 |
-| Station | Christ College of Engineering, Irinjalakuda, Kerala |
-| Standing | CGPA 10/10 |
-| Languages | English, Hindi, Malayalam, basic Spanish |
+```python
+class Ananya:
+    """
+    Computer Science undergraduate. Builder. Occasional insomniac.
+    Certified coffee-to-code converter since 2024.
+    """
 
-She works across machine learning, computer vision, cybersecurity, and software engineering, with the habits those fields actually require: data structures, object-oriented design, databases, operating systems, debugging, and a preference for making a thing smaller until it is clear. The tools she uses in that work are Python, Java, C, JavaScript, HTML, CSS, SQL, and the shell; React, Bootstrap, and Spring Boot; TensorFlow, NumPy, and OpenCV; Git, Linux, VS Code, Streamlit, and Overleaf.
+    name       = "Ananya Biju"
+    location   = "Thrissur, Kerala, India 🌴"
+    education  = "B.Tech CSE @ Christ College of Engineering"
+    cgpa       = 10   # yes, really
+    pronouns   = "she/her"
 
-The current practice is applied learning rather than a single job title. Generative models, perception, and defensive security sit next to ordinary software: an interface, a service, a schema. She also debates, writes, and reads. On 7 November 2026 the public LeetCode profile [ananyaaaabiju](https://leetcode.com/u/ananyaaaabiju/) showed 66 accepted solutions — 57 easy, 9 medium, none hard — mostly in Python 3, with 10 in C and 2 in MySQL.
+    internships = 5       # and counting
+    patents     = 1       # filed April 2026 🚀
+    hackathons  = "too many to list, not enough to stop"
 
-A model is a claim about the world. It earns its place when a person can see what it was trained on, what it refuses to do, and what happens when it is wrong. The same standard applies to a page of prose and to a system under load. Curiosity is not a substitute for that standard.
+    current_obsessions = [
+        "AI/ML & Computer Vision",
+        "Full-Stack Development",
+        "Cybersecurity Fundamentals",
+        "That one bug that shouldn't exist but does",
+        "books, books and more books!",
+        "leetcode"
+    ]
 
-### Fieldwork
+    def mission(self) -> str:
+        return "Build technology that solves real problems — not just demo-day magic."
 
-The internships are not one role repeated.
+    def fun_fact(self) -> str:
+        return (
+            "I file patents, win hackathons, and collect internships. "
+            "Apparently I also sleep occasionally. Allegedly."
+        )
+```
 
-**Government Engineering College, Thrissur.** AI/ML summer internship, June 2026. Status: completed. Distinction: Best Performer. The public study from that internship is [LucraLens AI](https://github.com/itsananyaaa/LucraLens_AI).
+---
 
-**Infosys Springboard.** Virtual Internship 6.0, December 2025, and Virtual Internship 7.0, in AI/ML and data visualisation. On 6.0 she was temporary team lead for [FitPlan](https://github.com/itsananyaaa/FitPlan): documentation, backend, data preprocessing, visualisation, integration, and testing, with mentor sessions on Agile and GitHub. No separate public repository was found for 7.0.
+## ✦ By the Numbers
 
-<details>
-<summary>Earlier programmes</summary>
+<div align="center">
 
-**Vodafone / VOIS, with Edunet Foundation and AICTE.** Cybersecurity, December 2025. The public study is the [network intrusion repository](https://github.com/itsananyaaa/AI_Network_Intrusion_System). The same training included a keylogger, written to study capture from the defensive side, on Kali Linux and VirtualBox. [That exercise](https://github.com/itsananyaaa/Keylogger-Application) is not on the shelves.
+|  | |
+|:---:|:---:|
+| 🏅 **10 / 10 CGPA** | 📜 **Indian Patent Filed (Apr 2026)** |
+| 🥈 **Runner-Up @ IIT Kanpur Hackathon** | 💼 **5× Technical Intern** |
+| 🏆 **Debate Winner (SYNAPSE)** | 🛰️ **Top Performer Intern GECT'26** |
 
-**IBM SkillsBuild.** Frontend and web development, August 2025. Hands-on HTML, CSS, JavaScript, responsive layout, and the [Eloquent Quiz Application](https://github.com/itsananyaaa/Eloquent-Quiz-Application) as capstone.
+</div>
 
-**Shell, with Edunet Foundation and AICTE.** AI/ML, July 2025. Sustainability problems aligned with the SDGs, and a deforestation-detection study on MODIS satellite data. The public notebook is the [MODIS repository](https://github.com/itsananyaaa/deforestation_detection_system).
+---
 
-**IBM SkillsBuild.** AI/ML, June 2025. Data preprocessing, training, and evaluation, and the [Employee Salary Prediction](https://github.com/itsananyaaa/Employee_Salary_Prediction_System) application.
+## 🛠 Tech Stack
 
-**Microsoft, with Edunet Foundation and AICTE.** Foundations of AI, April 2025. Supervised and unsupervised models, computer vision and generative AI through Azure Custom Vision, and an AI chatbot as capstone. That chatbot has no public repository.
+### Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
-</details>
+### AI · ML · Data Science
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
-<p align="center">
-  <img src="assets/rule.svg" alt="" width="100%">
-</p>
+### Frameworks & Backend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
 
-## Shelves of Obsession
+### Tools & Platforms
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white)
 
-Each volume is a public repository unless the entry says otherwise. A cover is an illustration. The name, the description, and the link are the record. Nothing here is described as deployed unless the address answered.
+---
 
-### Guardian Wing
-
-<p align="center">
-  <img src="assets/frontispiece.svg" alt="Patent plate for Guardian Wing. Application 202641048328, filed April 2026, not granted. No public repository." width="100%">
-</p>
-
-Collaborative fleet intelligence system. Indian patent **application filed**, number **202641048328**, April 2026. It has not been granted. There is no public repository, and this page does not pretend otherwise.
-
-### Vol. I — AI and ML
-
-<a href="https://github.com/itsananyaaa/LucraLens_AI"><img src="assets/covers/lucralens.svg" alt="Book cover titled LucraLens AI, Volume I, compensation." width="148"></a>
-
-**LucraLens AI.** A compensation model for technology salaries, built as the final project of the GEC Thrissur AI/ML internship. The training notebook fits a random-forest regressor. The interface is a Streamlit application. No public deployment was found.
-
-Python, scikit-learn, Streamlit. [Repository](https://github.com/itsananyaaa/LucraLens_AI).
-
-<a href="https://github.com/itsananyaaa/Employee_Salary_Prediction_System"><img src="assets/covers/salary.svg" alt="Book cover titled Salary Study, Volume I, estimation." width="148"></a>
-
-**Employee Salary Prediction.** The June 2025 IBM SkillsBuild AI/ML build: a Streamlit estimator over the same public salary table as LucraLens, covering experience, employment type, role, company size, location, and remote ratio. The notebook and the application are different files, and the repository does not name the algorithm. No public deployment.
-
-Python, Streamlit. [Repository](https://github.com/itsananyaaa/Employee_Salary_Prediction_System).
-
-<a href="https://github.com/itsananyaaa/deforestation_detection_system"><img src="assets/covers/modis.svg" alt="Book cover titled MODIS Field, Volume I, satellite." width="148"></a>
-
-**MODIS field notes.** The repository is named `deforestation_detection_system` and is described as an AICTE internship project. The notebook that is actually checked in classifies fire types from MODIS satellite scenes for India, 2021 to 2023. This page does not add a deforestation score the notebook does not show.
-
-Python, Jupyter. [Repository](https://github.com/itsananyaaa/deforestation_detection_system).
-
-### Vol. II — Computer Vision and Perception
-
-<a href="https://github.com/itsananyaaa/harry_potter_invisibility_cloak"><img src="assets/covers/cloak.svg" alt="Book cover titled Cloak, Volume II, perception." width="148"></a>
-
-**Invisibility cloak.** A webcam study. Cloth in a yellow range is masked in HSV and replaced with a captured background, in real time, with OpenCV and NumPy. It runs locally. There is no deployment.
-
-Python, OpenCV, NumPy. [Repository](https://github.com/itsananyaaa/harry_potter_invisibility_cloak).
-
-<a href="https://github.com/itsananyaaa/roadsense-ai"><img src="assets/covers/roadsense.svg" alt="Book cover titled RoadSense, Volume II, pavement." width="148"></a>
-
-**RoadSense AI.** Road-damage detection and an inspection-priority platform, built on the RDD2022 benchmark and a YOLO model. The repository's own description is the claim; this page does not repeat benchmark scores. No public deployment was found.
-
-Python. [Repository](https://github.com/itsananyaaa/roadsense-ai).
-
-### Vol. III — Cybersecurity and Digital Defence
-
-<a href="https://github.com/itsananyaaa/AI_Network_Intrusion_System"><img src="assets/covers/nids.svg" alt="Book cover titled Intrusion Study, Volume III, defence." width="148"></a>
-
-**Network intrusion study.** A random-forest classifier trained on a CIC-IDS2017 DDoS subset, with a Streamlit surface that can ask Groq to explain a flagged flow. It is a student project. The explanations require an API key supplied at runtime. No public deployment was found.
-
-Python, scikit-learn, Streamlit. [Repository](https://github.com/itsananyaaa/AI_Network_Intrusion_System).
-
-### Vol. IV — Software Engineering and Systems
-
-<a href="https://github.com/itsananyaaa/Pocket_Plans"><img src="assets/covers/pocket.svg" alt="Book cover titled Pocket Plans, Volume IV, itinerary." width="148"></a>
-
-**Pocket Plans.** A travel roadmap rather than a single suggestion: mood, time, and place go in; a short sequence of stops comes out, using Geoapify and OpenWeatherMap, with navigation links. Ananya Biju is named on the team with Annrose P. T. The public repository is a fork of the TinkerHub hackathon project `tink-her-hack-temp`. The README still has a placeholder where a hosted link would go, so there is no live address here.
-
-Python, FastAPI, JavaScript. [Repository](https://github.com/itsananyaaa/Pocket_Plans).
-
-<a href="https://github.com/itsananyaaa/NoteVerse"><img src="assets/covers/noteverse.svg" alt="Book cover titled NoteVerse, Volume IV, notes." width="148"></a>
-
-**NoteVerse.** A browser notebook. Each line can carry a checkbox, notes can be reordered by dragging, and nothing is stored on a server. HTML, CSS, and JavaScript only. No deployment.
-
-[Repository](https://github.com/itsananyaaa/NoteVerse).
-
-<a href="https://github.com/itsananyaaa/thesilentindex"><img src="assets/covers/silence.svg" alt="Book cover titled Silence Index, Volume IV, heritage." width="148"></a>
-
-**The Silence Index.** A diagnostic for what an Indian heritage collection documents, and what it leaves out. Built with Angel Maria Ben for the ART CODE hackathon. The repository states a FastAPI service and a Next.js interface.
-
-The site and the health check both answered on 7 November 2026: [thesilentindex.vercel.app](https://thesilentindex.vercel.app) and [the API health endpoint](https://thesilentindex-backend.onrender.com/api/health). [Repository](https://github.com/itsananyaaa/thesilentindex).
-
-### Appendix
-
-Quiet entries. Still true, still not dressed up as more than they are.
+## 💼 Experience
 
 <details>
-<summary>Work with a thin public record, and work with no repository at all</summary>
-
-- **FitPlan.** Collaborative Infosys Springboard 6.0 project. She was temporary team lead: documentation, backend, preprocessing, visualisation, integration, and testing. The repository README itself does not describe a feature list. [Repository](https://github.com/itsananyaaa/FitPlan).
-- **Eloquent Quiz Application.** Frontend internship capstone. The repository is a single HTML document and calls itself an AICTE frontend project. [Repository](https://github.com/itsananyaaa/Eloquent-Quiz-Application).
-- **SahAI.** Maternal-health decision support, marked work in progress in its own repository. [Repository](https://github.com/itsananyaaa/sahai).
-- **Drug Recall Monitor.** A hackathon build with Alvino P. Shatto and Ann Sani, marked work in progress in the repository. [Repository](https://github.com/itsananyaaa/drugrecallmonitor).
-- **NPS Saathi.** A public assistant for the National Pension System. The repository does not identify it as the PFRDA hackathon submission, so this page does not either. [Repository](https://github.com/itsananyaaa/nps_saathi).
-- **FoodHub.** Full-stack restaurant ordering, named in the supplied record as Spring Boot, Thymeleaf, and REST. No public repository under that name was found, so it is not linked.
-- **Pharmacy management.** An ongoing database project in the supplied record. No public repository.
-- **Cache performance.** A study of cache behaviour and replacement policies in Ripes, in the supplied record. No public repository.
-
+<summary><b>🟣 AI/ML Intern — Govt. Engineering College Thrissur (Jun 2026)</b></summary>
+<br/>
+Selected for GECT's Summer Internship Programme 2026. Joining the AI/ML track for hands-on applied research experience.
 </details>
 
-<p align="center">
-  <img src="assets/rule.svg" alt="" width="100%">
-</p>
+<details>
+<summary><b>🔵 AI/ML Intern — Infosys Springboard 6.0 (Dec 2025)</b></summary>
+<br/>
 
-## Neural Constellation
+- Served as **temporary Team Lead** for project group
+- Built **Fitplan.ai** — end-to-end: documentation, backend dev, data preprocessing, visualization, integration & testing
+- Attended mentor-led sessions on Agile methodologies and GitHub workflows
+</details>
 
-<p align="center">
-  <img src="assets/constellation.svg" alt="A radial diagram. Practice sits at the centre. AI and ML connects to computer vision, data science, and generative AI. Software engineering connects to backend, frontend, and databases. Cybersecurity connects to intrusion detection, system security, and defensive engineering." width="100%">
-</p>
+<details>
+<summary><b>🔴 Cybersecurity Intern — Vodafone/VOIS × Edunet × AICTE (Dec 2025)</b></summary>
+<br/>
 
-The drawing is generated from [`data/constellation.json`](data/constellation.json). The relationships, in words:
+- Developed a **keylogger application** and **AI Network Intrusion System** as part of hands-on cybersecurity training
+- Strengthened practical skills using **Kali Linux** and **VirtualBox**
+- Built understanding of system vulnerabilities from both attack and defense perspectives
+</details>
 
-- **AI / ML** pulls toward computer vision, data science, and generative AI.
-- **Software engineering** pulls toward backend work, frontend work, and databases.
-- **Cybersecurity** pulls toward intrusion detection, system security, and defensive engineering.
+<details>
+<summary><b>🟡 Frontend & Web Dev Intern — IBM SkillsBuild × Edunet × AICTE (Aug 2025)</b></summary>
+<br/>
 
-<p align="center">
-  <img src="assets/rule.svg" alt="" width="100%">
-</p>
+- Hands-on with HTML, CSS, JavaScript, responsive design, and clean coding practices
+- Built a fully functional **Quiz Application** as capstone — applying real-world UI/UX and frontend dev concepts
+</details>
 
-## The Classified Files
+<details>
+<summary><b>🟢 AI/ML Intern — Shell × Edunet × AICTE (Jul 2025)</b></summary>
+<br/>
 
-The patent, the hackathons, the internship distinction, and the academic record come first. The rest of the record follows in the same hand, without badges.
+- Applied AI models to **sustainability-driven** problem statements aligned with SDGs
+- Designed and implemented a **Deforestation Detection System** using MODIS satellite data
+</details>
 
-**Patent.** Guardian Wing, collaborative fleet intelligence. Indian patent application **202641048328**, filed April 2026. Filed is not granted.
+<details>
+<summary><b>🔵 AI/ML Intern — IBM SkillsBuild × Edunet × AICTE (Jun 2025)</b></summary>
+<br/>
 
-**Hackathons.** First runner-up, PFRDA Hackathon, IIT Kanpur, March 2026. Internal-round shortlist, Smart India Hackathon 2025.
+- Hands-on in data preprocessing, model training, and evaluation
+- Designed an **Employee Salary Prediction System** using ML techniques
+</details>
 
-**Internship.** Best Performer, Government Engineering College Thrissur, AI/ML summer internship, June 2026. The wider ledger is above: Infosys Springboard 6.0 and 7.0, Vodafone/VOIS, IBM SkillsBuild (frontend, and a separate AI/ML programme), Shell, and Microsoft.
+<details>
+<summary><b>⚪ Foundations of AI Intern — Microsoft × Edunet × AICTE (Apr 2025)</b></summary>
+<br/>
 
-**Academic.** B.Tech computer science and engineering, Christ College of Engineering, 2024–2028. CGPA 10/10.
+- Built and evaluated supervised & unsupervised ML models (regression + classification)
+- Applied Computer Vision and **Generative AI** concepts via Azure Custom Vision
+- Developed an **AI-based chatbot** as capstone using deep learning fundamentals
+</details>
 
-**Speaking.** Winner, SYNAPSE debate, January 2026. Second prize, Argument Arena debate, February 2025. Third prize, micropresentation, August 2025. Technical lead of CODe.
+---
 
-**Quiz.** Top 10, Fortress of Facts engineering quiz, February 2025.
+## 🚀 Projects
 
-**Events coordinated.** Perception vs Potential, an invited talk, March 2026. IMMERSIVEA '26, a VR simulation, February 2026. Tech Bingo and VidGenesis, Techletics '26, January 2026.
+| Project | Stack | Highlights |
+|---|---|---|
+| 🛡️ **Guardian Wing** *(Patent Filed)* | AI, Fleet Systems | Collaborative Fleet Intelligence — Indian Patent App. No. 202641048328 |
+| 🗺️ **Pocket Plans** | Python, FastAPI, Geoapify, OpenWeatherMap | AI travel roadmap generator — mood-based, weather-aware, Google Maps linked |
+| 🔒 **AI Network Intrusion System** | Python, Scikit-learn, Streamlit, HuggingFace | ML-powered attack detection with AI-driven explanations |
+| 🌱 **Deforestation Detection** | Python, Pandas, Scikit-learn, MODIS | Satellite-data ML pipeline for environmental monitoring |
+| 🍽️ **FoodHub** | Java Spring Boot, Thymeleaf, REST APIs | Full-stack restaurant ordering system — led team, built & integrated end-to-end |
+| 🧙 **Harry Potter Invisibility Cloak** | Python, OpenCV, NumPy | Real-time computer vision — color masking & background replacement |
+| 💊 **Pharmacy Management System** | SQL, DBMS | Inventory, sales & supplier system — *in progress* |
+| 📝 **NoteVerse** | HTML, CSS, JavaScript | Clean notes app with task tracking — responsive, minimal, fast |
+| 💰 **Employee Salary Predictor** | Python, Streamlit, Scikit-learn | Interactive ML web app for HR analytics |
+| ⌨️ **Keylogger App** | Python, pynput | Cybersecurity training project — captures and stores keyboard events |
 
-**Conferences.** SpaceUp Unconference, CUSAT, January 2026. BeachHack Season 7, Ocean Panel, January 2026. UST GenCyS cybersecurity conference, August 2025. SustainX, IGBC and CUSAT, March 2025. Young Innovators Program, K-DISC, January 2025.
+---
 
-**Courses.** Python for Data Science, NPTEL, Elite. Microsoft Learn: AI, computer vision, NLP, generative AI, and AI fluency. Infosys Springboard: AI, NLP, data science, and soft skills. Accenture software-engineering job simulation. Deloitte cyber-security analyst job simulation. Digital 101, 30 hours, Gold. Java Spring Boot, iPlus Solutions.
+## 📊 GitHub Stats
 
-**Rooms she works in.** TinkerHub, FOSS, Women Techmakers, and Google Developer communities.
+<div align="center">
 
-<p align="center">
-  <img src="assets/rule.svg" alt="" width="100%">
-</p>
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=itsananyaaa&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true"/>
+<img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=itsananyaaa&theme=tokyonight&hide_border=true"/>
 
-## The Living Archive
+<br/><br/>
 
-These plates are drawn from the public GitHub API and stored in the repository, so the page still reads when a third-party stats service does not. A weekly Action refreshes them with the built-in token and writes only this section and `assets/stats/`. There is no view counter.
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=itsananyaaa&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"/>
 
-<!-- living-archive:start -->
-Public GitHub record for `itsananyaaa`, fetched 2026-11-06T21:05:31Z. Contribution counts are the public calendar from 2025-11-07 to 2026-11-06. Language share and stars exclude forks, so an upstream copy cannot dominate the shelf. The streak counts backward from the latest day; if that day is today and still empty, it starts from yesterday.
+</div>
 
-| Record | Figure |
-| --- | ---: |
-| Public repositories | 36 |
-| Public repositories that are not forks | 32 |
-| Stars on those non-fork repositories | 3 |
-| Public contributions in the window | 121 |
-| Current public streak | 4 days |
-| Longest public streak in the window | 6 days |
+---
 
-| Language | Bytes | Share |
-| --- | ---: | ---: |
-| Jupyter Notebook | 19,066,163 | 84.0% |
-| TypeScript | 1,441,993 | 6.3% |
-| Python | 1,436,662 | 6.3% |
-| HTML | 296,155 | 1.3% |
-| JavaScript | 274,509 | 1.2% |
-| CSS | 157,893 | 0.7% |
+## 🏆 Achievements & Community
 
-Jupyter Notebook leads the byte count because a notebook file stores outputs as well as source. Read that share as file weight, not as hours spent.
+```
+📜 Indian Patent Filed — "Guardian Wing: Collaborative Fleet Intelligence System" (Apr 2026)
+🥈 First Runners Up — PFRDA Hackathon @ IIT Kanpur (Mar 2026)
+🛡️ Shortlisted — Smart India Hackathon 2025
+🏆 Winner — SYNAPSE Debate Competition (Jan 2026)
+🥈 2nd Place — Argument Arena Debate (Feb 2025)
+🥉 3rd Prize — Micropresentation Competition (Aug 2025)
+🔟 Top 10 — Fortress of Facts Engineering Quiz (Feb 2025)
 
-The same figures are drawn in `assets/stats/`. A failed refresh leaves this snapshot in place.
-<!-- living-archive:end -->
+🎯 Events Coordinated:
+   • Perception vs Potential — Invited Talk (Mar 2026)
+   • IMMERSIVEA '26 — VR Simulation Event (Feb 2026)
+   • Tech Bingo, VidGenesis — Techletics '26 (Jan 2026)
 
-<p align="center">
-  <img src="assets/stats/summary.svg" alt="Summary of public GitHub activity: repositories, stars, contributions, and streak." width="100%">
-</p>
+🌍 Conferences Attended:
+   • SpaceUp Unconference, CUSAT (Jan 2026)
+   • BeachHack Season 7 — Ocean Panel (Jan 2026)
+   • UST GenCyS 2025 Cybersecurity Conference (Aug 2025)
+   • SustainX Sustainability Conference, IGBC & CUSAT (Mar 2025)
+   • Young Innovators Program, K-DISC (Jan 2025)
 
-<p align="center">
-  <img src="assets/stats/calendar.svg" alt="A year of public GitHub contributions, in crimson, burgundy, and gold on black." width="100%">
-</p>
+📚 Certifications & Courses:
+   • Python for Data Science — NPTEL Elite Status
+   • AI, CV, NLP, GenAI, AI Fluency — Microsoft Learn
+   • Infosys Springboard — AI, NLP, Data Science, Soft Skills
+   • Software Engineering Job Simulation — Accenture
+   • Cyber Security Analyst Job Simulation — Deloitte
+   • Digital 101 (30 hrs) — Gold Category
+   • Java Spring Boot — iPlus Solutions
+```
 
-<p align="center">
-  <img src="assets/stats/languages.svg" alt="Share of code bytes by language, counted only in public repositories that are not forks." width="100%">
-</p>
+---
 
-<p align="center">
-  <img src="assets/rule.svg" alt="" width="100%">
-</p>
+## 🌐 Let's Connect
 
-## The Reading Room
+<div align="center">
 
-<p align="center">
-  <img src="assets/reading-room.svg" alt="A short shelf of dark books. Only one spine is titled: Never Lie, by Freida McFadden. The other volumes are deliberately untitled." width="100%">
-</p>
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ananya.bijuks@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ananyabiju)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/itsananyaaa)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/ananyaaaabiju/)
 
-One title is named because one title was given. *Never Lie*, by Freida McFadden, is the novel she returns to. The other spines stay blank. Inventing a personal canon would be a kind of forgery, and this archive has no use for that.
+</div>
 
-Reading and engineering share a second pass. The first pass takes the plot, or the happy path. The second asks what was withheld: a missing case, a quiet assumption, a sentence that only works if the reader agrees not to look. She wants systems that can survive that second reading, and stories that reward it.
+---
 
-<p align="center">
-  <img src="assets/rule.svg" alt="" width="100%">
-</p>
+## ⚡ Current Runtime
 
-## The Final Seal
+```python
+while alive:
+    learn()          # mandatory
+    build()          # obsession
+    break_things()   # inevitable
+    fix_things()     # character development
+    drink_coffee()   # non-negotiable
+    repeat()         # feature, not bug
+```
 
-<p align="center">
-  <img src="assets/seal.svg" alt="A crimson seal with the monogram A B and the name Ananya Biju." width="220">
-</p>
+---
 
-The archive stays open for work that can survive daylight.
+<div align="center">
 
-Correspondence is welcome: internships, research, and things that have not been built yet.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,25&height=120&section=footer"/>
 
-[LinkedIn](https://www.linkedin.com/in/ananyabiju/) · [GitHub](https://github.com/itsananyaaa) · [LeetCode](https://leetcode.com/u/ananyaaaabiju/) · [Email](mailto:ananya.bijuks@gmail.com)
+**"The best way to predict the future is to build it."**
 
-<p align="center">
-  <img src="assets/rule.svg" alt="" width="100%">
-</p>
+*Open to internships, collaborations, and conversations about ideas that shouldn't work but somehow do.*
+
+⭐ If something here sparked your interest, come on — let's talk!
+
+</div>
