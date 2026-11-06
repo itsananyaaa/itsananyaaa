@@ -1,0 +1,20 @@
+{
+  "center": "Practice",
+  "clusters": [
+    {
+      "id": "aiml",
+      "label": "AI / ML",
+      "children": ["Computer Vision", "Data Science", "Generative AI"]
+    },
+    {
+      "id": "software",
+      "label": "Software Engineering",
+      "children": ["Backend", "Frontend", "Databases"]
+    },
+    {
+      "id": "security",
+      "label": "Cybersecurity",
+      "children": ["Intrusion Detection", "System Security", "Defensive Engineering"]
+    }
+  ]
+}

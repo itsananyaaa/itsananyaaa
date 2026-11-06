@@ -1,0 +1,42 @@
+name: Living archive
+
+on:
+  schedule:
+    # Monday, after the previous week has closed. Public data only.
+    - cron: "17 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: living-archive
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Install the outline library
+        run: python3 -m pip install --disable-pip-version-check fonttools==4.58.5
+
+      - name: Render the public record
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ARCHIVE_LOGIN: ${{ github.repository_owner }}
+        run: python3 scripts/generate_stats.py
+
+      - name: Commit the snapshot
+        run: |
+          git add assets/stats README.md
+          if git diff --cached --quiet; then
+            echo "The public record has not changed."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Refresh the living archive from the public GitHub record"
+          git push
