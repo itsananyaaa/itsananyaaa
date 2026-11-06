@@ -1,6 +1,6 @@
 {
   "login": "itsananyaaa",
-  "fetched_at": "2026-11-06T20:51:05Z",
+  "fetched_at": "2026-11-06T21:05:31Z",
   "window": {
     "from": "2025-11-07",
     "to": "2026-11-06"
@@ -252,11 +252,11 @@
     },
     {
       "date": "2025-12-28",
-      "count": 0
+      "count": 1
     },
     {
       "date": "2025-12-29",
-      "count": 3
+      "count": 2
     },
     {
       "date": "2025-12-30",
@@ -440,11 +440,11 @@
     },
     {
       "date": "2026-02-13",
-      "count": 1
+      "count": 2
     },
     {
       "date": "2026-02-14",
-      "count": 4
+      "count": 3
     },
     {
       "date": "2026-02-15",
@@ -1428,11 +1428,11 @@
     },
     {
       "date": "2026-10-18",
-      "count": 8
+      "count": 9
     },
     {
       "date": "2026-10-19",
-      "count": 9
+      "count": 8
     },
     {
       "date": "2026-10-20",
@@ -1496,11 +1496,11 @@
     },
     {
       "date": "2026-11-04",
-      "count": 10
+      "count": 11
     },
     {
       "date": "2026-11-05",
-      "count": 8
+      "count": 7
     },
     {
       "date": "2026-11-06",
@@ -1511,22 +1511,22 @@
     {
       "name": "Jupyter Notebook",
       "bytes": 19066163,
-      "share": 0.841
+      "share": 0.8397
     },
     {
       "name": "TypeScript",
       "bytes": 1441993,
-      "share": 0.0636
+      "share": 0.0635
     },
     {
       "name": "Python",
-      "bytes": 1401300,
-      "share": 0.0618
+      "bytes": 1436662,
+      "share": 0.0633
     },
     {
       "name": "HTML",
       "bytes": 296155,
-      "share": 0.0131
+      "share": 0.013
     },
     {
       "name": "JavaScript",

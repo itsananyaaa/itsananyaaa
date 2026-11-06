@@ -206,7 +206,7 @@ The patent, the hackathons, the internship distinction, and the academic record 
 These plates are drawn from the public GitHub API and stored in the repository, so the page still reads when a third-party stats service does not. A weekly Action refreshes them with the built-in token and writes only this section and `assets/stats/`. There is no view counter.
 
 <!-- living-archive:start -->
-Public GitHub record for `itsananyaaa`, fetched 2026-11-06T20:51:05Z. Contribution counts are the public calendar from 2025-11-07 to 2026-11-06. Language share and stars exclude forks, so an upstream copy cannot dominate the shelf. The streak counts backward from the latest day; if that day is today and still empty, it starts from yesterday.
+Public GitHub record for `itsananyaaa`, fetched 2026-11-06T21:05:31Z. Contribution counts are the public calendar from 2025-11-07 to 2026-11-06. Language share and stars exclude forks, so an upstream copy cannot dominate the shelf. The streak counts backward from the latest day; if that day is today and still empty, it starts from yesterday.
 
 | Record | Figure |
 | --- | ---: |
@@ -219,9 +219,9 @@ Public GitHub record for `itsananyaaa`, fetched 2026-11-06T20:51:05Z. Contributi
 
 | Language | Bytes | Share |
 | --- | ---: | ---: |
-| Jupyter Notebook | 19,066,163 | 84.1% |
-| TypeScript | 1,441,993 | 6.4% |
-| Python | 1,401,300 | 6.2% |
+| Jupyter Notebook | 19,066,163 | 84.0% |
+| TypeScript | 1,441,993 | 6.3% |
+| Python | 1,436,662 | 6.3% |
 | HTML | 296,155 | 1.3% |
 | JavaScript | 274,509 | 1.2% |
 | CSS | 157,893 | 0.7% |
