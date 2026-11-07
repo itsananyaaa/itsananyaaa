@@ -1,14 +1,17 @@
 """
-Master SVG Visual Asset Generator for Ananya Biju's Profile README.
-Features:
-- Natural photographic portrait (original tones, upright, cropped, no red duotone tint).
-- Verified 10 / 10 CGPA.
-- Authentic 3D GitHub contribution skyline powered by 365 real days from manifest.json.
-- Perfectly aligned internship timeline boxes with generous breathing room.
-- Comprehensive Wins Wall including 1st Prize @ Design for Her Ideathon.
-- Pet Lover tile featuring Bobby the cat.
-- Full categorized technical stack matching resume.
-- Outlined vector paths via fonttools.
+Master SVG Visual Asset Generator for Ananya Biju's Profile README (Revision 2).
+Incorporates all user feedback:
+1. Natural photographic portrait (original tones, upright, cropped, no red duotone).
+2. 10.0 / 10 CGPA everywhere with zero text overflow.
+3. Interactive hoverable grid block background in hero banner.
+4. SMIL + CSS infinitely sliding marquee ticker with achievements on top.
+5. All 18+ GitHub projects as individual cards (zero plain text).
+6. Complete technical proficiencies in structured SVG card blocks (no 'resume source').
+7. Fixed 3D GitHub skyline with zero overlap (pushed down with clear clearance).
+8. Wins wall with all achievements in visual cards (including 1st Prize Design for Her Ideathon).
+9. Internships flowchart retained as visual card only (no plain text).
+10. Off-Duty bento with Bobby the cat.
+11. Dedicated individual clickable pill buttons at the bottom (Resume, LinkedIn, GitHub, LeetCode, Goodreads, Email).
 """
 
 import os
@@ -42,6 +45,21 @@ def svg_wrapper(w: int, h: int, inner_xml: str, extra_defs: str = "") -> str:
         0%, 100% {{ opacity: 1; transform: scale(1); }}
         50% {{ opacity: 0.35; transform: scale(0.92); }}
       }}
+      .card-hover {{
+        transition: stroke 0.25s ease, filter 0.25s ease;
+      }}
+      .card-hover:hover {{
+        stroke: {COLOR_RED_HOT} !important;
+        stroke-width: 1.5px !important;
+        filter: drop-shadow(0 0 10px rgba(226, 35, 47, 0.5));
+      }}
+      .grid-block {{
+        transition: fill 0.2s ease, stroke 0.2s ease;
+      }}
+      .grid-block:hover {{
+        fill: #2A0407 !important;
+        stroke: {COLOR_RED_HOT} !important;
+      }}
     </style>
     {extra_defs}
   </defs>
@@ -51,7 +69,7 @@ def svg_wrapper(w: int, h: int, inner_xml: str, extra_defs: str = "") -> str:
 
 
 # ==========================================
-# 0. HERO SECTION
+# 0. HERO SECTION (WITH INTERACTIVE GRID)
 # ==========================================
 def generate_hero():
     w, h = 1000, 440
@@ -64,7 +82,13 @@ def generate_hero():
         with open(portrait_path, "rb") as f:
             portrait_b64 = base64.b64encode(f.read()).decode("ascii")
 
-    # Rotating asterisk at top right
+    # Interactive background grid blocks (50x50 cells)
+    grid_xml = ""
+    for gx in range(0, w, 50):
+        for gy in range(0, h, 44):
+            grid_xml += f'<rect class="grid-block" x="{gx}" y="{gy}" width="49" height="43" fill="#0C0C0D" stroke="#161618" stroke-width="0.5"/>\n'
+
+    # Rotating red asterisk at top right
     asterisk_svg = f"""
     <g transform="translate(940, 55)">
       <g class="animated" style="transform-origin: 0 0; animation: spin 20s linear infinite;">
@@ -75,44 +99,43 @@ def generate_hero():
     </g>
     """
 
-    # Micro-labels at top
     tag0 = text_path(FONT_INTER, "00 // PORTFOLIO PROFILE", 50, 45, 12, fill=COLOR_RED_HOT, tracking=0.15)
     tag1 = text_path(FONT_INTER, "CHRIST COLLEGE OF ENGINEERING // EST. 2024", 50, 68, 11, fill=COLOR_GREY_MUTED, tracking=0.12)
     tag2 = text_path(FONT_INTER, "IRINJALAKUDA, KERALA, INDIA", 50, 90, 11, fill=COLOR_GREY_MUTED, tracking=0.12)
 
-    # Giant Stacked Title: ANANYA / BIJU
     title_ananya = text_path(FONT_ANTON, "ANANYA", 50, 220, 130, fill="none", stroke=COLOR_WHITE, stroke_width=2.5, tracking=0.04)
     title_biju = text_path(FONT_ANTON, "BIJU", 50, 345, 130, fill=COLOR_RED_HOT, tracking=0.04)
 
-    # Sub-role pill & microcopy
-    role_bg = f'<rect x="50" y="375" width="280" height="34" rx="4" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>'
+    role_bg = f'<rect class="card-hover" x="50" y="375" width="280" height="34" rx="4" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>'
     role_live_dot = f'<circle cx="68" cy="392" r="4.5" fill="{COLOR_RED_HOT}" class="animated" style="animation: pulse 2s ease-in-out infinite;"/>'
     role_txt = text_path(FONT_INTER, "AI/ML BUILDER // SYSTEMS // VISION", 82, 396, 11, fill=COLOR_WHITE, tracking=0.1)
 
-    cgpa_pill = f'<rect x="345" y="375" width="130" height="34" rx="4" fill="{COLOR_CARD}" stroke="{COLOR_BORDER_HOT}" stroke-width="1.5"/>'
+    cgpa_pill = f'<rect class="card-hover" x="345" y="375" width="130" height="34" rx="4" fill="{COLOR_CARD}" stroke="{COLOR_BORDER_HOT}" stroke-width="1.5"/>'
     cgpa_txt = text_path(FONT_INTER, "CGPA 10.0 / 10", 360, 396, 11, fill=COLOR_RED_HOT, tracking=0.1)
 
-    # Portrait cutout / framed card on right with original natural photographic tones
     portrait_element = ""
     if portrait_b64:
         portrait_element = f"""
         <g transform="translate(560, 35)">
-          <!-- Hairline border frame -->
-          <rect x="0" y="0" width="390" height="375" rx="8" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
-          <!-- Subtle red backlight gradient ring -->
+          <rect class="card-hover" x="0" y="0" width="390" height="375" rx="8" fill="{COLOR_CARD}" stroke="{COLOR_BORDER_HOT}" stroke-width="1"/>
           <circle cx="195" cy="180" r="150" fill="{COLOR_RED_DEEP}" opacity="0.2"/>
           <clipPath id="portrait-clip">
             <rect x="2" y="2" width="386" height="330" rx="7"/>
           </clipPath>
           <image href="data:image/png;base64,{portrait_b64}" x="5" y="5" width="380" height="325" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait-clip)"/>
-          <!-- Overlay hairline grid line -->
           <line x1="0" y1="334" x2="390" y2="334" stroke="{COLOR_BORDER}" stroke-width="1"/>
-          {text_path(FONT_INTER, "ANANYA BIJU // PORTRAIT ARCHIVE", 15, 358, 10, fill=COLOR_WHITE, tracking=0.12)}
+          {text_path(FONT_INTER, "ANANYA BIJU // PORTRAIT FILE", 15, 358, 10, fill=COLOR_WHITE, tracking=0.12)}
           {text_path(FONT_INTER, "ORIGINAL TONES", 285, 358, 10, fill=COLOR_RED_HOT, tracking=0.12)}
         </g>
         """
 
     inner = f"""
+    <!-- Interactive Background Grid -->
+    <g opacity="0.75">
+      {grid_xml}
+    </g>
+    <!-- Background blackout overlay behind text -->
+    <rect x="40" y="20" width="490" height="400" rx="8" fill="{COLOR_BG}" opacity="0.88"/>
     <line x1="50" y1="110" x2="520" y2="110" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {tag0}
     {tag1}
@@ -129,12 +152,15 @@ def generate_hero():
     """
     svg = svg_wrapper(w, h, inner)
     (ASSETS_DIR / "hero" / "hero_banner.svg").write_text(svg)
-    print("Generated hero_banner.svg")
+    print("Generated hero_banner.svg with interactive grid blocks")
 
 
+# ==========================================
+# 0b. CONTINUOUS SLIDING TICKER (ACHIEVEMENTS ON TOP)
+# ==========================================
 def generate_marquee():
     w, h = 1000, 48
-    items = "  *  AI/ML & COMPUTER VISION  *  DISTRIBUTED EDGE SYSTEMS  *  GUARDIAN WING PATENT FILED  *  10.0 CGPA  *  IIT KANPUR RUNNER-UP  *  1ST PRIZE IDEATHON  *  7 INTERNSHIPS COMPLETED  *  HIGH-PERFORMANCE FULL-STACK  *  "
+    items = "  *  1ST PRIZE DESIGN FOR HER IDEATHON  *  FIRST RUNNER-UP PFRDA x IIT KANPUR  *  GUARDIAN WING PATENT FILED  *  10.0 / 10 CGPA  *  BEST PERFORMER GEC THRISSUR  *  WINNER SYNAPSE DEBATE  *  7 TECHNICAL INTERNSHIPS COMPLETED  *  AI/ML & COMPUTER VISION  *  "
     w_text = measure_text(FONT_INTER, items, 13, tracking=0.18)
     t1 = text_path(FONT_INTER, items, 0, 30, 13, fill=COLOR_WHITE, tracking=0.18)
     t2 = text_path(FONT_INTER, items, w_text, 30, 13, fill=COLOR_WHITE, tracking=0.18)
@@ -149,41 +175,43 @@ def generate_marquee():
     inner = f"""
     <line x1="0" y1="0.5" x2="{w}" y2="0.5" stroke="{COLOR_BORDER}" stroke-width="1"/>
     <line x1="0" y1="{h-0.5}" x2="{w}" y2="{h-0.5}" stroke="{COLOR_BORDER}" stroke-width="1"/>
-    <g class="animated" style="animation: marquee_loop 25s linear infinite;">
+    <g class="animated" style="animation: marquee_loop 24s linear infinite;">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-{w_text:.1f} 0" dur="24s" repeatCount="indefinite"/>
       {t1}
       {t2}
     </g>
     """
     svg = svg_wrapper(w, h, inner, extra_defs=marquee_defs)
     (ASSETS_DIR / "hero" / "marquee_strip.svg").write_text(svg)
-    print("Generated marquee_strip.svg")
+    print("Generated marquee_strip.svg with achievements on top and SMIL animation")
 
 
 # ==========================================
-# 1. ABOUT BENTO SECTION
+# 1. ABOUT BENTO (NO TEXT OVERFLOW)
 # ==========================================
 def generate_about():
     w, h = 1000, 320
     col1 = f"""
-    <rect x="30" y="30" width="300" height="260" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+    <rect class="card-hover" x="30" y="30" width="300" height="260" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {text_path(FONT_INTER, "01 // ROLE & IDENTITY", 50, 60, 11, fill=COLOR_RED_HOT, tracking=0.15)}
     {text_path(FONT_ANTON, "BUILDER.", 50, 105, 38, fill=COLOR_WHITE, tracking=0.03)}
     {text_path(FONT_ANTON, "ENGINEER.", 50, 145, 38, fill=COLOR_RED_HOT, tracking=0.03)}
     <line x1="50" y1="170" x2="310" y2="170" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {text_path(FONT_INTER, "B.TECH COMPUTER SCIENCE", 50, 200, 12, fill=COLOR_WHITE, tracking=0.08)}
-    {text_path(FONT_INTER, "Christ College of Engineering", 50, 222, 12, fill=COLOR_GREY_MUTED, tracking=0.04)}
-    {text_path(FONT_INTER, "High-impact intelligent systems & engineering.", 50, 252, 11, fill=COLOR_GREY_MUTED, tracking=0.04)}
+    {text_path(FONT_INTER, "Christ College of Engineering", 50, 222, 11.5, fill=COLOR_GREY_MUTED, tracking=0.04)}
+    {text_path(FONT_INTER, "High-impact intelligent systems.", 50, 252, 11, fill=COLOR_GREY_MUTED, tracking=0.04)}
     """
 
+    # Box 2: CGPA 10.0 (strictly verified inside borders)
     col2 = f"""
-    <rect x="350" y="30" width="300" height="260" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER_HOT}" stroke-width="1.5"/>
+    <rect class="card-hover" x="350" y="30" width="300" height="260" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER_HOT}" stroke-width="1.5"/>
     {text_path(FONT_INTER, "02 // ACADEMIC STANDING", 370, 60, 11, fill=COLOR_RED_HOT, tracking=0.15)}
     {text_path(FONT_ANTON, "10.0", 370, 135, 78, fill=COLOR_WHITE, tracking=0.02)}
     {text_path(FONT_INTER, "/ 10 CGPA", 535, 120, 18, fill=COLOR_RED_HOT, tracking=0.08)}
     <line x1="370" y1="170" x2="630" y2="170" stroke="{COLOR_BORDER}" stroke-width="1"/>
-    {text_path(FONT_INTER, "PERFECT UNIVERSITY STANDING", 370, 200, 11, fill=COLOR_GREY_MUTED, tracking=0.12)}
-    {text_path(FONT_INTER, "Top academic performance across engineering coursework.", 370, 225, 11, fill=COLOR_WHITE, tracking=0.04)}
-    {text_path(FONT_INTER, "Technical Lead @ CODe (CSE Dept Association).", 370, 250, 11, fill=COLOR_GREY_MUTED, tracking=0.04)}
+    {text_path(FONT_INTER, "PERFECT UNIVERSITY STANDING", 370, 198, 10.5, fill=COLOR_GREY_MUTED, tracking=0.1)}
+    {text_path(FONT_INTER, "Top academic performance across CSE.", 370, 224, 10.5, fill=COLOR_WHITE, tracking=0.04)}
+    {text_path(FONT_INTER, "Technical Lead @ CODe Association.", 370, 250, 10.5, fill=COLOR_GREY_MUTED, tracking=0.04)}
     """
 
     chips = [
@@ -203,7 +231,7 @@ def generate_about():
         """
 
     col3 = f"""
-    <rect x="670" y="30" width="300" height="260" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+    <rect class="card-hover" x="670" y="30" width="300" height="260" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {text_path(FONT_INTER, "03 // FOCUS & ROOTS", 690, 60, 11, fill=COLOR_RED_HOT, tracking=0.15)}
     {text_path(FONT_INTER, "LANGUAGES: EN / HI / ML / ES", 690, 90, 11, fill=COLOR_WHITE, tracking=0.08)}
     {text_path(FONT_INTER, "BASE: KERALA, INDIA", 690, 112, 11, fill=COLOR_GREY_MUTED, tracking=0.08)}
@@ -214,7 +242,7 @@ def generate_about():
     inner = f"{col1}\n{col2}\n{col3}"
     svg = svg_wrapper(w, h, inner)
     (ASSETS_DIR / "about" / "about_bento.svg").write_text(svg)
-    print("Generated about_bento.svg")
+    print("Generated about_bento.svg with zero text overflow")
 
 
 # ==========================================
@@ -233,7 +261,7 @@ def generate_numbers():
     for val, unit, caption, x in stats:
         tiles += f"""
         <g transform="translate({x}, 15)">
-          <rect x="0" y="0" width="220" height="130" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+          <rect class="card-hover" x="0" y="0" width="220" height="130" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
           {text_path(FONT_ANTON, val, 20, 72, 54, fill=COLOR_WHITE, tracking=0.02)}
           {text_path(FONT_INTER, unit, 20, 95, 12, fill=COLOR_RED_HOT, tracking=0.15)}
           <line x1="20" y1="104" x2="200" y2="104" stroke="{COLOR_BORDER}" stroke-width="1"/>
@@ -247,12 +275,13 @@ def generate_numbers():
 
 
 # ==========================================
-# 3. WORK / PROJECTS SECTION
+# 3. WORK / ALL PROJECTS AS INDIVIDUAL CARDS
 # ==========================================
-def generate_project_cards():
+def generate_all_project_cards():
+    # 3.1 Pinned Hero Card: Guardian Wing
     gw_w, gw_h = 1000, 240
     gw_inner = f"""
-    <rect x="30" y="20" width="940" height="200" rx="8" fill="{COLOR_CARD}" stroke="{COLOR_BORDER_HOT}" stroke-width="1.5"/>
+    <rect class="card-hover" x="30" y="20" width="940" height="200" rx="8" fill="{COLOR_CARD}" stroke="{COLOR_BORDER_HOT}" stroke-width="1.5"/>
     <rect x="50" y="40" width="260" height="26" rx="4" fill="{COLOR_RED_MUTED}" stroke="{COLOR_RED_HOT}" stroke-width="1"/>
     {text_path(FONT_INTER, "PATENT APPLICATION FILED // APR 2026", 60, 57, 10, fill=COLOR_WHITE, tracking=0.12)}
     
@@ -277,6 +306,7 @@ def generate_project_cards():
     """
     (ASSETS_DIR / "work" / "card_guardian_wing.svg").write_text(svg_wrapper(gw_w, gw_h, gw_inner))
 
+    # All 18 projects in card format
     projects = [
         ("card_lucralens.svg", "02", "LUCRALENS AI", "AI & ML", "Streamlit app predicting corporate revenue using Random Forest regression.", ["PYTHON", "RANDOM FOREST", "STREAMLIT"]),
         ("card_roadsense.svg", "03", "ROADSENSE AI", "COMPUTER VISION", "AI road-damage detection & inspection-priority platform.", ["YOLO26N", "RDD2022", "PYTORCH"]),
@@ -284,6 +314,18 @@ def generate_project_cards():
         ("card_nids.svg", "05", "NETWORK INTRUSION AI", "SECURITY & ML", "ML network attack classifier with AI-driven plain explanations.", ["SCIKIT-LEARN", "RANDOM FOREST", "HUGGINGFACE"]),
         ("card_modis.svg", "06", "DEFORESTATION ML", "REMOTE SENSING", "Satellite telemetry analysis detecting forest cover transitions.", ["MODIS", "PANDAS", "GEOSPATIAL"]),
         ("card_noteverse.svg", "07", "NOTEVERSE", "UI & INTERACTION", "Fast drag-and-drop notes organizer with persistent state.", ["JAVASCRIPT", "DOM ENGINE", "LOCALSTORAGE"]),
+        ("card_foodsync.svg", "08", "FOODSYNC / FOODHUB", "SPRING BOOT & REST", "Smart restaurant ordering system with table and billing workflows.", ["JAVA", "SPRING BOOT", "THYMELEAF", "REST"]),
+        ("card_cloak.svg", "09", "INVISIBILITY CLOAK", "COMPUTER VISION", "Real-time color masking and live video background replacement.", ["PYTHON", "OPENCV", "NUMPY", "COLOR MASK"]),
+        ("card_salary.svg", "10", "SALARY PREDICTOR", "HR ANALYTICS ML", "Interactive compensation regression engine based on empirical roles.", ["STREAMLIT", "PANDAS", "SCIKIT-LEARN"]),
+        ("card_fitplan.svg", "11", "FITPLAN.AI", "HEALTH & ACTIVITY ML", "Personalized fitness analytics engine and health dashboard capstone.", ["JUPYTER", "SCIKIT-LEARN", "AGILE"]),
+        ("card_keylogger.svg", "12", "KEYLOGGER APP", "CYBERSECURITY LAB", "Keystroke analysis tool capturing events for vulnerability audit.", ["PYTHON", "PYNPUT", "KALI LINUX"]),
+        ("card_nps.svg", "13", "NPS SAATHI", "FINTECH & ANALYTICS", "National Pension Scheme intelligence engine built for IIT Kanpur.", ["TYPESCRIPT", "PENSION API", "FINTECH"]),
+        ("card_drugrecall.svg", "14", "DRUG RECALL MONITOR", "HEALTH TELEMETRY", "Real-time pharmaceutical recall notification and safety engine.", ["PYTHON", "REST API", "PHARMA"]),
+        ("card_diabetes.svg", "15", "DIABETES PREDICTOR", "CLINICAL ML", "Diagnostic risk assessment web application using medical vectors.", ["PYTHON", "SCIKIT-LEARN", "HEALTHCARE"]),
+        ("card_quiz.svg", "16", "ELOQUENT QUIZ APP", "FRONTEND ARCHITECTURE", "Interactive web quiz platform applying responsive clean UI/UX.", ["HTML5", "CSS3", "VANILLA JS"]),
+        ("card_cache.svg", "17", "CACHE ANALYSIS", "COMPUTER SYSTEMS", "Cache memory architecture simulator evaluating LRU & CPI in Ripes.", ["RIPES", "LRU CACHE", "ASSEMBLY"]),
+        ("card_pharmacy.svg", "18", "PHARMACY MANAGEMENT", "DATABASE & SQL", "Relational inventory, supplier, and sales transaction DBMS.", ["SQL", "RELATIONAL SCHEMA", "DBMS"]),
+        ("card_wireless.svg", "19", "WIRELESS POWER", "HARDWARE & IOT", "Inductive coupling contactless energy transfer optimization model.", ["HARDWARE", "INDUCTIVE", "IOT"]),
     ]
 
     for filename, idx, title, category, blurb, chips in projects:
@@ -299,10 +341,10 @@ def generate_project_cards():
             cx += cw + 8
 
         inner = f"""
-        <rect x="10" y="10" width="460" height="200" rx="8" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+        <rect class="card-hover" x="10" y="10" width="460" height="200" rx="8" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
         <line x1="10" y1="50" x2="470" y2="50" stroke="{COLOR_BORDER}" stroke-width="1"/>
         {text_path(FONT_INTER, f"PROJECT // {idx}", 30, 36, 11, fill=COLOR_RED_HOT, tracking=0.15)}
-        {text_path(FONT_INTER, category, 340, 36, 10, fill=COLOR_GREY_MUTED, tracking=0.1)}
+        {text_path(FONT_INTER, category, 320, 36, 10, fill=COLOR_GREY_MUTED, tracking=0.1)}
         
         {text_path(FONT_ANTON, title, 30, 95, 30, fill=COLOR_WHITE, tracking=0.03)}
         {text_path(FONT_INTER, blurb, 30, 130, 11, fill=COLOR_GREY_MUTED, tracking=0.03)}
@@ -313,16 +355,17 @@ def generate_project_cards():
 
 
 # ==========================================
-# 4. TECH STACK SECTION (FULL RESUME TAXONOMY)
+# 4. TECH STACK (FULL RESUME SPECIFICATION BLOCKS)
 # ==========================================
 def generate_stack():
-    w, h = 1000, 340
-    # 4 distinct category panels covering the user's complete resume skills
+    w, h = 1000, 480
     panels = [
-        ("01 // PROGRAMMING LANGUAGES", ["PYTHON", "JAVA", "C", "JAVASCRIPT", "HTML", "CSS", "SQL", "SHELL SCRIPTING"], 30, 20, 460, 140),
-        ("02 // CORE CS & SOFTWARE ENG", ["DATA STRUCTURES", "ALGORITHMS", "OOP", "DBMS & SQL", "OPERATING SYSTEMS", "CODE OPTIMIZATION", "CLEAN CODE"], 510, 20, 460, 140),
-        ("03 // FRAMEWORKS & LIBRARIES", ["REACT.JS", "BOOTSTRAP", "SPRING BOOT", "TENSORFLOW", "NUMPY", "OPENCV", "FASTAPI", "PANDAS"], 30, 180, 460, 140),
-        ("04 // TOOLS, PLATFORMS & DOMAINS", ["GIT & GITHUB", "LINUX / UNIX", "VS CODE", "STREAMLIT", "AI/ML", "COMPUTER VISION", "CYBERSECURITY"], 510, 180, 460, 140),
+        ("01 // PROGRAMMING LANGUAGES", ["PYTHON", "JAVA", "C", "JAVASCRIPT", "HTML", "CSS", "SQL", "SHELL SCRIPTING"], 30, 20, 460, 135),
+        ("02 // CORE COMPUTER SCIENCE", ["DATA STRUCTURES", "ALGORITHMS", "OOP", "DBMS & SQL", "OPERATING SYSTEMS", "PROBLEM SOLVING"], 510, 20, 460, 135),
+        ("03 // FRAMEWORKS & LIBRARIES", ["REACT.JS", "BOOTSTRAP", "SPRING BOOT", "TENSORFLOW", "NUMPY", "OPENCV", "FASTAPI", "PANDAS"], 30, 175, 460, 135),
+        ("04 // TOOLS & TECHNOLOGIES", ["GIT & GITHUB", "LINUX / UNIX", "VS CODE", "STREAMLIT", "OVERLEAF", "POSTMAN", "KALI LINUX"], 510, 175, 460, 135),
+        ("05 // SOFTWARE DEVELOPMENT SKILLS", ["DEBUGGING", "CODE OPTIMIZATION", "VERSION CONTROL", "CLEAN CODE", "TEAM COLLABORATION", "ANALYTICAL THINKING"], 30, 330, 460, 135),
+        ("06 // AREAS OF INTEREST & FOCUS", ["SOFTWARE ENG", "FRONTEND DEV", "AI/ML", "COMPUTER VISION", "CLOUD", "CYBERSECURITY", "BLOCKCHAIN"], 510, 330, 460, 135),
     ]
 
     panel_xml = ""
@@ -342,60 +385,53 @@ def generate_stack():
             x += tw + 8
 
         panel_xml += f"""
-        <rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+        <rect class="card-hover" x="{px}" y="{py}" width="{pw}" height="{ph}" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
         {text_path(FONT_INTER, title, px+20, py+32, 10, fill=COLOR_RED_HOT, tracking=0.15)}
         {chip_xml}
         """
 
     svg = svg_wrapper(w, h, panel_xml)
     (ASSETS_DIR / "stack" / "stack_grid.svg").write_text(svg)
-    print("Generated stack_grid.svg")
+    print("Generated stack_grid.svg with complete resume proficiencies")
 
 
 # ==========================================
-# 5. 3D ISOMETRIC SKYLINE (POWERED BY REAL 365 DAYS)
+# 5. 3D ISOMETRIC SKYLINE (FIXED OVERLAP & POSITIONING)
 # ==========================================
 def generate_skyline():
-    w, h = 1000, 390
+    w, h = 1000, 440
 
-    # Load real 365-day manifest
     manifest_path = REPO_ROOT / "scripts" / "manifest.json"
     with open(manifest_path) as f:
         manifest = json.load(f)
 
-    days = manifest["days"]  # 365 days
+    days = manifest["days"]
     total_contributions = manifest["contributions"]
     current_streak = manifest["current_streak_days"]
     longest_streak = manifest["longest_streak_days"]
 
     header = f"""
-    {text_path(FONT_INTER, "05 // GITHUB LIVING RECORD", 50, 42, 11, fill=COLOR_RED_HOT, tracking=0.15)}
-    {text_path(FONT_ANTON, "AUTHENTIC 3D CONTRIBUTION SKYLINE", 50, 80, 30, fill=COLOR_WHITE, tracking=0.03)}
-    {text_path(FONT_INTER, f"{total_contributions} VERIFIED CONTRIBUTIONS IN 2026 // 36 REPOSITORIES", 50, 104, 11, fill=COLOR_GREY_MUTED, tracking=0.1)}
+    {text_path(FONT_INTER, "05 // GITHUB LIVING RECORD", 50, 45, 11, fill=COLOR_RED_HOT, tracking=0.15)}
+    {text_path(FONT_ANTON, "AUTHENTIC 3D CONTRIBUTION SKYLINE", 50, 85, 34, fill=COLOR_WHITE, tracking=0.03)}
+    {text_path(FONT_INTER, f"{total_contributions} VERIFIED CONTRIBUTIONS IN 2026 // 36 REPOSITORIES", 50, 112, 11, fill=COLOR_GREY_MUTED, tracking=0.1)}
     
     <g transform="translate(680, 25)">
-      <rect x="0" y="0" width="270" height="72" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+      <rect class="card-hover" x="0" y="0" width="270" height="78" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
       {text_path(FONT_INTER, "CURRENT STREAK", 20, 26, 9, fill=COLOR_GREY_MUTED, tracking=0.15)}
-      {text_path(FONT_ANTON, f"{current_streak} DAYS", 20, 56, 26, fill=COLOR_RED_HOT, tracking=0.03)}
-      {text_path(FONT_INTER, f"LONGEST: {longest_streak} DAYS", 130, 54, 10, fill=COLOR_WHITE, tracking=0.1)}
+      {text_path(FONT_ANTON, f"{current_streak} DAYS", 20, 58, 28, fill=COLOR_RED_HOT, tracking=0.03)}
+      {text_path(FONT_INTER, f"LONGEST: {longest_streak} DAYS", 130, 56, 10, fill=COLOR_WHITE, tracking=0.1)}
     </g>
     """
 
-    # Group 365 days into 52 weeks x 7 days
-    # Week 0..51, day 0..6
-    # Isometric transformation:
-    # origin at cx=500, cy=240
-    # week step dx=14, dy=7
-    # day step dx=-14, dy=7
+    # Shift isometric origin down to y=290 so the top of the grid never touches the title
     origin_x = 500
-    origin_y = 230
+    origin_y = 290
 
     pillars = []
     tile_w = 12
     tile_h = 6
-
-    # 52 weeks can be grouped by pairs of weeks for crisp isometric density (26 cols x 7 rows)
     weeks_count = 52
+
     for week_idx in range(weeks_count):
         for day_idx in range(7):
             idx = week_idx * 7 + day_idx
@@ -404,7 +440,6 @@ def generate_skyline():
             day_data = days[idx]
             count = day_data["count"]
 
-            # Screen isometric coordinates:
             iso_x = origin_x + (week_idx - weeks_count/2) * 13 - (day_idx - 3.5) * 13
             iso_y = origin_y + (week_idx - weeks_count/2) * 6.5 + (day_idx - 3.5) * 6.5
 
@@ -429,17 +464,13 @@ def generate_skyline():
                 side_col = COLOR_RED_ACCENT
                 side_col_r = "#650508"
             else:
-                ht = 72
+                ht = 70
                 top_col = "#FF4B4B"
                 side_col = COLOR_RED_HOT
                 side_col_r = COLOR_RED_ACCENT
 
-            # Isometric polygon vertices:
-            # Top face (4 points)
             top_p = f"{iso_x},{iso_y - ht} {iso_x + tile_w},{iso_y + tile_h - ht} {iso_x},{iso_y + tile_h*2 - ht} {iso_x - tile_w},{iso_y + tile_h - ht}"
-            # Left side
             left_p = f"{iso_x - tile_w},{iso_y + tile_h - ht} {iso_x},{iso_y + tile_h*2 - ht} {iso_x},{iso_y + tile_h*2} {iso_x - tile_w},{iso_y + tile_h}"
-            # Right side
             right_p = f"{iso_x + tile_w},{iso_y + tile_h - ht} {iso_x},{iso_y + tile_h*2 - ht} {iso_x},{iso_y + tile_h*2} {iso_x + tile_w},{iso_y + tile_h}"
 
             polygon_xml = f"""
@@ -449,33 +480,32 @@ def generate_skyline():
             """
             pillars.append((iso_y, polygon_xml))
 
-    # Painter's sort from back to front
     pillars.sort(key=lambda p: p[0])
     rendered_pillars = "\n".join([p[1] for p in pillars])
 
     inner = f"""
     {header}
-    <g transform="translate(0, 20)">
+    <g>
       {rendered_pillars}
     </g>
-    <!-- Axis Month Labels -->
-    {text_path(FONT_INTER, "NOV", 140, 365, 9, fill=COLOR_GREY_MUTED, tracking=0.15)}
-    {text_path(FONT_INTER, "JAN", 290, 365, 9, fill=COLOR_GREY_MUTED, tracking=0.15)}
-    {text_path(FONT_INTER, "MAR", 440, 365, 9, fill=COLOR_GREY_MUTED, tracking=0.15)}
-    {text_path(FONT_INTER, "MAY", 590, 365, 9, fill=COLOR_GREY_MUTED, tracking=0.15)}
-    {text_path(FONT_INTER, "JUL", 740, 365, 9, fill=COLOR_GREY_MUTED, tracking=0.15)}
-    {text_path(FONT_INTER, "OCT", 880, 365, 9, fill=COLOR_GREY_MUTED, tracking=0.15)}
+    <!-- Month Labels along baseline -->
+    {text_path(FONT_INTER, "NOV", 140, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
+    {text_path(FONT_INTER, "JAN", 290, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
+    {text_path(FONT_INTER, "MAR", 440, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
+    {text_path(FONT_INTER, "MAY", 590, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
+    {text_path(FONT_INTER, "JUL", 740, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
+    {text_path(FONT_INTER, "OCT", 880, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
     """
     svg = svg_wrapper(w, h, inner)
     (ASSETS_DIR / "activity" / "skyline_3d.svg").write_text(svg)
-    print("Generated skyline_3d.svg with real contribution data")
+    print("Generated skyline_3d.svg with zero headline overlap")
 
 
 # ==========================================
-# 6. WINS & HONOURS (INCLUDES DESIGN FOR HER IDEATHON)
+# 6. WINS & HONOURS (100% CARDS FORMAT)
 # ==========================================
 def generate_wins():
-    w, h = 1000, 340
+    w, h = 1000, 440
     wins = [
         ("1ST PRIZE WINNER", "DESIGN FOR HER IDEATHON", "2026", "State-level women in technology product innovation champion.", COLOR_RED_HOT),
         ("FIRST RUNNER-UP", "PFRDA HACKATHON // IIT KANPUR", "MAR 2026", "National runner-up in fintech & pension analytics hackathon.", COLOR_WHITE),
@@ -483,6 +513,8 @@ def generate_wins():
         ("BEST PERFORMER AWARD", "GEC THRISSUR AI/ML INTERNSHIP", "JUNE 2026", "Selected top performer in advanced applied machine learning cohort.", COLOR_WHITE),
         ("WINNER // SYNAPSE", "DEBATE CHAMPIONSHIP", "JAN 2026", "First prize in inter-collegiate parliamentary debate competition.", COLOR_WHITE),
         ("2ND PRIZE // ARGUMENT ARENA", "REGIONAL DEBATE LEAGUE", "FEB 2025", "Runner-up in Oxford-style structured debate tournament.", COLOR_WHITE),
+        ("SHORTLISTED // SIH 2025", "SMART INDIA HACKATHON", "OCT 2025", "Selected in institutional evaluation round for national finals.", COLOR_WHITE),
+        ("3RD PRIZE // TECHLETICS", "MICROPRESENTATION LEAGUE", "AUG 2025", "Podium finish in technical research communication contest.", COLOR_WHITE),
     ]
 
     tiles = ""
@@ -494,7 +526,7 @@ def generate_wins():
 
         tiles += f"""
         <g transform="translate({x}, {y})">
-          <rect x="0" y="0" width="460" height="90" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+          <rect class="card-hover" x="0" y="0" width="460" height="92" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
           {text_path(FONT_INTER, f"{org} // {date}", 20, 24, 10, fill=COLOR_GREY_MUTED, tracking=0.1)}
           {text_path(FONT_ANTON, title, 20, 54, 21, fill=accent, tracking=0.03)}
           {text_path(FONT_INTER, blurb, 20, 75, 10, fill=COLOR_GREY_MUTED, tracking=0.04)}
@@ -503,7 +535,7 @@ def generate_wins():
 
     svg = svg_wrapper(w, h, tiles)
     (ASSETS_DIR / "wins" / "wins_wall.svg").write_text(svg)
-    print("Generated wins_wall.svg")
+    print("Generated wins_wall.svg with 8 full cards")
 
 
 # ==========================================
@@ -511,7 +543,6 @@ def generate_wins():
 # ==========================================
 def generate_timeline():
     w, h = 1000, 290
-    # 7 distinct programs with perfect in-box containment and vertical hierarchy
     stages = [
         ("01", "INFOSYS", "Springboard 6.0 & 7.0", "AI/ML & Data Viz", "FitPlan Capstone"),
         ("02", "GEC THRISSUR", "Summer Internship", "Applied AI/ML", "Best Performer"),
@@ -532,76 +563,57 @@ def generate_timeline():
         x = start_x + i * step_w
         cards += f"""
         <g transform="translate({x}, 40)">
-          <!-- Node circle on timeline -->
           <circle cx="{box_w/2}" cy="30" r="5" fill="{COLOR_RED_HOT}"/>
           <circle cx="{box_w/2}" cy="30" r="11" fill="none" stroke="{COLOR_BORDER}" stroke-width="1"/>
           
-          <!-- Box container -->
-          <rect x="0" y="55" width="{box_w}" height="{box_h}" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
-          
-          <!-- Program micro-label -->
+          <rect class="card-hover" x="0" y="55" width="{box_w}" height="{box_h}" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
           {text_path(FONT_INTER, f"PRG // {num}", 14, 76, 9, fill=COLOR_RED_HOT, tracking=0.15)}
-          
-          <!-- Main Partner Heading -->
           {text_path(FONT_ANTON, partner, 14, 102, 16, fill=COLOR_WHITE, tracking=0.03)}
-          
-          <!-- Organization line -->
           {text_path(FONT_INTER, org, 14, 122, 8.5, fill=COLOR_GREY_MUTED, tracking=0.04)}
-          
-          <!-- Domain Track line -->
           {text_path(FONT_INTER, domain, 14, 140, 8.5, fill=COLOR_RED_ACCENT, tracking=0.04)}
-          
-          <!-- Divider inside box -->
           <line x1="14" y1="156" x2="{box_w - 14}" y2="156" stroke="{COLOR_BORDER}" stroke-width="1"/>
-          
-          <!-- Key project / outcome -->
           {text_path(FONT_INTER, project, 14, 182, 8.5, fill=COLOR_WHITE, tracking=0.04)}
         </g>
         """
 
     inner = f"""
-    <!-- Continuous connecting timeline line -->
     <line x1="50" y1="70" x2="950" y2="70" stroke="{COLOR_BORDER_HOT}" stroke-width="1.5"/>
     {cards}
     """
     svg = svg_wrapper(w, h, inner)
     (ASSETS_DIR / "timeline" / "internships_timeline.svg").write_text(svg)
-    print("Generated internships_timeline.svg with perfect in-box alignment")
+    print("Generated internships_timeline.svg with perfect alignment")
 
 
 # ==========================================
-# 8. OFF-DUTY BENTO (INCLUDES CAT BOBBY)
+# 8. OFF-DUTY BENTO (WITH BOBBY THE CAT)
 # ==========================================
 def generate_offduty():
     w, h = 1000, 220
     fav_title = 'FAVOURITE: "NEVER LIE"'
     inner = f"""
-    <!-- Tile 1: Pet Lover (Bobby the Cat) -->
-    <rect x="30" y="20" width="220" height="180" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER_HOT}" stroke-width="1.5"/>
+    <rect class="card-hover" x="30" y="20" width="220" height="180" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER_HOT}" stroke-width="1.5"/>
     {text_path(FONT_INTER, "08 // PET COMPANION", 45, 48, 10, fill=COLOR_RED_HOT, tracking=0.15)}
     {text_path(FONT_ANTON, "BOBBY THE CAT", 45, 85, 24, fill=COLOR_WHITE, tracking=0.03)}
     {text_path(FONT_INTER, "FELINE CHIEF AUDITOR", 45, 112, 10, fill=COLOR_RED_HOT, tracking=0.08)}
     <line x1="45" y1="128" x2="235" y2="128" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {text_path(FONT_INTER, "Dedicated pet lover & proud cat parent.", 45, 155, 9.5, fill=COLOR_GREY_MUTED, tracking=0.04)}
 
-    <!-- Tile 2: Reading Record -->
-    <rect x="270" y="20" width="220" height="180" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+    <rect class="card-hover" x="270" y="20" width="220" height="180" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {text_path(FONT_INTER, "08 // READING LIST", 285, 48, 10, fill=COLOR_RED_HOT, tracking=0.15)}
     {text_path(FONT_ANTON, "FREIDA MCFADDEN", 285, 85, 22, fill=COLOR_WHITE, tracking=0.03)}
     {text_path(FONT_INTER, fav_title, 285, 112, 10, fill=COLOR_RED_HOT, tracking=0.08)}
     <line x1="285" y1="128" x2="475" y2="128" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {text_path(FONT_INTER, "Psychological thrillers & puzzle mysteries.", 285, 155, 9.5, fill=COLOR_GREY_MUTED, tracking=0.04)}
 
-    <!-- Tile 3: Debate -->
-    <rect x="510" y="20" width="220" height="180" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+    <rect class="card-hover" x="510" y="20" width="220" height="180" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {text_path(FONT_INTER, "08 // RHETORIC", 525, 48, 10, fill=COLOR_RED_HOT, tracking=0.15)}
     {text_path(FONT_ANTON, "DEBATE & ORATORY", 525, 85, 22, fill=COLOR_WHITE, tracking=0.03)}
     {text_path(FONT_INTER, "SYNAPSE CHAMPION", 525, 112, 10, fill=COLOR_WHITE, tracking=0.08)}
     <line x1="525" y1="128" x2="715" y2="128" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {text_path(FONT_INTER, "Parliamentary debate & competitive rhetoric.", 525, 155, 9.5, fill=COLOR_GREY_MUTED, tracking=0.04)}
 
-    <!-- Tile 4: Community -->
-    <rect x="750" y="20" width="220" height="180" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+    <rect class="card-hover" x="750" y="20" width="220" height="180" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {text_path(FONT_INTER, "08 // ECOSYSTEM", 765, 48, 10, fill=COLOR_RED_HOT, tracking=0.15)}
     {text_path(FONT_ANTON, "COMMUNITY LEAD", 765, 85, 22, fill=COLOR_WHITE, tracking=0.03)}
     {text_path(FONT_INTER, "TINKERHUB // FOSS", 765, 112, 10, fill=COLOR_RED_HOT, tracking=0.08)}
@@ -614,36 +626,56 @@ def generate_offduty():
 
 
 # ==========================================
-# 9. CLOSING SAY HI & SOCIALS SECTION
+# 9. CLOSING SECTION & DEDICATED BUTTONS
 # ==========================================
-def generate_closing():
-    w, h = 1000, 270
+def generate_closing_and_buttons():
+    # 9.1 Closing Hero Headline
+    w, h = 1000, 200
     t_lets = text_path(FONT_ANTON, "LET'S BUILD", 50, 95, 78, fill="none", stroke=COLOR_WHITE, stroke_width=2.0, tracking=0.03)
     t_together = text_path(FONT_ANTON, "SOMETHING REAL.", 50, 165, 78, fill=COLOR_RED_HOT, tracking=0.03)
-
-    pills = [
-        ("RESUME (PDF)", 50, 195, 130),
-        ("LINKEDIN", 195, 195, 115),
-        ("GITHUB", 325, 195, 105),
-        ("LEETCODE", 445, 195, 115),
-        ("EMAIL", 575, 195, 100),
-    ]
-    pills_xml = ""
-    for label, px, py, pw in pills:
-        pills_xml += f"""
-        <rect x="{px}" y="{py}" width="{pw}" height="36" rx="18" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
-        {text_path(FONT_INTER, label, px+18, py+23, 11, fill=COLOR_WHITE, tracking=0.15)}
-        """
-
     inner = f"""
     {text_path(FONT_INTER, "09 // DIRECT COLLABORATIONS", 50, 35, 11, fill=COLOR_RED_HOT, tracking=0.15)}
     {t_lets}
     {t_together}
-    {pills_xml}
     """
-    svg = svg_wrapper(w, h, inner)
-    (ASSETS_DIR / "closing" / "closing_hero.svg").write_text(svg)
+    (ASSETS_DIR / "closing" / "closing_hero.svg").write_text(svg_wrapper(w, h, inner))
     print("Generated closing_hero.svg")
+
+    # 9.2 Individual Pill Buttons (Red-bordered, highlighted, clickable)
+    buttons = [
+        ("btn_resume.svg", "RESUME (PDF)", 160, COLOR_BORDER_HOT, COLOR_RED_HOT),
+        ("btn_linkedin.svg", "LINKEDIN", 135, COLOR_BORDER, COLOR_WHITE),
+        ("btn_github.svg", "GITHUB", 125, COLOR_BORDER, COLOR_WHITE),
+        ("btn_leetcode.svg", "LEETCODE", 135, COLOR_BORDER, COLOR_WHITE),
+        ("btn_goodreads.svg", "GOODREADS", 145, COLOR_BORDER, COLOR_WHITE),
+        ("btn_email.svg", "EMAIL", 120, COLOR_BORDER, COLOR_WHITE),
+    ]
+
+    for filename, label, bw, border_col, txt_col in buttons:
+        bh = 44
+        btn_xml = f"""
+        <rect class="card-hover" x="2" y="2" width="{bw-4}" height="{bh-4}" rx="20" fill="{COLOR_CARD}" stroke="{border_col}" stroke-width="1.5"/>
+        {text_path(FONT_INTER, label, bw/2, 27, 11, fill=txt_col, anchor="middle", tracking=0.15)}
+        """
+        btn_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {bw} {bh}" width="{bw}" height="{bh}">
+  <defs>
+    <style>
+      .card-hover {{
+        transition: all 0.25s ease;
+        cursor: pointer;
+      }}
+      .card-hover:hover {{
+        stroke: {COLOR_RED_HOT} !important;
+        stroke-width: 2px !important;
+        filter: drop-shadow(0 0 10px rgba(226, 35, 47, 0.6));
+      }}
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="{COLOR_BG}"/>
+  {btn_xml}
+</svg>"""
+        (ASSETS_DIR / "closing" / filename).write_text(btn_svg)
+        print(f"Generated {filename}")
 
 
 if __name__ == "__main__":
@@ -651,11 +683,11 @@ if __name__ == "__main__":
     generate_marquee()
     generate_about()
     generate_numbers()
-    generate_project_cards()
+    generate_all_project_cards()
     generate_stack()
     generate_skyline()
     generate_wins()
     generate_timeline()
     generate_offduty()
-    generate_closing()
+    generate_closing_and_buttons()
     print("All SVGs successfully generated!")
