@@ -89,12 +89,17 @@ def generate_hero():
         with open(portrait_path, "rb") as f:
             portrait_b64 = base64.b64encode(f.read()).decode("ascii")
 
-    # Pixel Spotlight Grid: 25x22 grid of interactive pixel squares
+    # Living Animated Pixel Spotlight Grid (25x20 grid)
+    # Staggered SMIL wave animation sweeps across the card continuously in GitHub markdown
     pixel_size = 25
     pixel_xml = ""
     for px in range(0, w, pixel_size):
         for py in range(0, h, 20):
-            pixel_xml += f'<rect class="pixel" x="{px}" y="{py}" width="{pixel_size-1}" height="19"/>\n'
+            delay = round(((px / 25 + py / 20) % 12) * 0.35, 2)
+            pixel_xml += f"""<rect class="pixel" x="{px}" y="{py}" width="{pixel_size-1}" height="19">
+        <animate attributeName="fill" values="#0E0E10;#E2232F;#0E0E10" dur="4.2s" begin="{delay}s" repeatCount="indefinite"/>
+        <animate attributeName="stroke" values="#17171A;#FF6B75;#17171A" dur="4.2s" begin="{delay}s" repeatCount="indefinite"/>
+      </rect>\n"""
 
     asterisk_svg = f"""
     <g transform="translate(940, 55)">
@@ -136,13 +141,14 @@ def generate_hero():
         </g>
         """
 
+    headline_backing = f'<rect x="42" y="25" width="485" height="390" rx="8" fill="{COLOR_BG}" opacity="0.55"/>'
+
     inner = f"""
-    <!-- Interactive Pixel Spotlight Background Grid -->
-    <g opacity="0.9">
+    <!-- Living Animated Pixel Spotlight Background Grid -->
+    <g opacity="0.95">
       {pixel_xml}
     </g>
-    <!-- Background blackout overlay behind headline for legibility -->
-    <rect x="40" y="20" width="490" height="400" rx="8" fill="{COLOR_BG}" opacity="0.88"/>
+    {headline_backing}
     <line x1="50" y1="110" x2="520" y2="110" stroke="{COLOR_BORDER}" stroke-width="1"/>
     {tag0}
     {tag1}
@@ -159,7 +165,7 @@ def generate_hero():
     """
     svg = svg_wrapper(w, h, inner)
     (ASSETS_DIR / "hero" / "hero_banner.svg").write_text(svg)
-    print("Generated hero_banner.svg with Pixel Spotlight Hover Effect")
+    print("Generated hero_banner.svg with Living Pixel Spotlight Wave")
 
 
 # ==========================================
@@ -434,50 +440,77 @@ def generate_all_project_cards():
     (ASSETS_DIR / "work" / "card_guardian_wing.svg").write_text(svg_wrapper(gw_w, gw_h, gw_inner))
 
     projects = [
-        ("card_lucralens.svg", "02", "LUCRALENS AI", "AI & ML", "Streamlit app predicting corporate revenue using Random Forest regression.", ["PYTHON", "RANDOM FOREST", "STREAMLIT"]),
-        ("card_roadsense.svg", "03", "ROADSENSE AI", "COMPUTER VISION", "AI road-damage detection & inspection-priority platform.", ["YOLO26N", "RDD2022", "PYTORCH"]),
-        ("card_pocketplans.svg", "04", "POCKET PLANS", "FULL-STACK & APIS", "AI travel itinerary planner with real-time weather & maps routing.", ["FASTAPI", "GEOAPIFY", "WEATHER API"]),
-        ("card_nids.svg", "05", "NETWORK INTRUSION AI", "SECURITY & ML", "ML network attack classifier with AI-driven plain explanations.", ["SCIKIT-LEARN", "RANDOM FOREST", "HUGGINGFACE"]),
-        ("card_modis.svg", "06", "DEFORESTATION ML", "REMOTE SENSING", "Satellite telemetry analysis detecting forest cover transitions.", ["MODIS", "PANDAS", "GEOSPATIAL"]),
-        ("card_noteverse.svg", "07", "NOTEVERSE", "UI & INTERACTION", "Fast drag-and-drop notes organizer with persistent state.", ["JAVASCRIPT", "DOM ENGINE", "LOCALSTORAGE"]),
-        ("card_foodsync.svg", "08", "FOODSYNC / FOODHUB", "SPRING BOOT & REST", "Smart restaurant ordering system with table and billing workflows.", ["JAVA", "SPRING BOOT", "THYMELEAF", "REST"]),
-        ("card_cloak.svg", "09", "INVISIBILITY CLOAK", "COMPUTER VISION", "Real-time color masking and live video background replacement.", ["PYTHON", "OPENCV", "NUMPY", "COLOR MASK"]),
-        ("card_salary.svg", "10", "SALARY PREDICTOR", "HR ANALYTICS ML", "Interactive compensation regression engine based on empirical roles.", ["STREAMLIT", "PANDAS", "SCIKIT-LEARN"]),
-        ("card_fitplan.svg", "11", "FITPLAN.AI", "HEALTH & ACTIVITY ML", "Personalized fitness analytics engine and health dashboard capstone.", ["JUPYTER", "SCIKIT-LEARN", "AGILE"]),
-        ("card_keylogger.svg", "12", "KEYLOGGER APP", "CYBERSECURITY LAB", "Keystroke analysis tool capturing events for vulnerability audit.", ["PYTHON", "PYNPUT", "KALI LINUX"]),
-        ("card_nps.svg", "13", "NPS SAATHI", "FINTECH & ANALYTICS", "National Pension Scheme intelligence engine built for IIT Kanpur.", ["TYPESCRIPT", "PENSION API", "FINTECH"]),
-        ("card_drugrecall.svg", "14", "DRUG RECALL MONITOR", "HEALTH TELEMETRY", "Real-time pharmaceutical recall notification and safety engine.", ["PYTHON", "REST API", "PHARMA"]),
-        ("card_diabetes.svg", "15", "DIABETES PREDICTOR", "CLINICAL ML", "Diagnostic risk assessment web application using medical vectors.", ["PYTHON", "SCIKIT-LEARN", "HEALTHCARE"]),
-        ("card_quiz.svg", "16", "ELOQUENT QUIZ APP", "FRONTEND ARCHITECTURE", "Interactive web quiz platform applying responsive clean UI/UX.", ["HTML5", "CSS3", "VANILLA JS"]),
-        ("card_cache.svg", "17", "CACHE ANALYSIS", "COMPUTER SYSTEMS", "Cache memory architecture simulator evaluating LRU & CPI in Ripes.", ["RIPES", "LRU CACHE", "ASSEMBLY"]),
-        ("card_pharmacy.svg", "18", "PHARMACY MANAGEMENT", "DATABASE & SQL", "Relational inventory, supplier, and sales transaction DBMS.", ["SQL", "RELATIONAL SCHEMA", "DBMS"]),
-        ("card_wireless.svg", "19", "WIRELESS POWER", "HARDWARE & IOT", "Inductive coupling contactless energy transfer optimization model.", ["HARDWARE", "INDUCTIVE", "IOT"]),
+        ("card_lucralens.svg", "02", "LUCRALENS AI", "AI & ML", "Streamlit app predicting corporate revenue using Random Forest.", ["PYTHON", "SCIKIT", "STREAMLIT"]),
+        ("card_roadsense.svg", "03", "ROADSENSE AI", "COMPUTER VISION", "AI road-damage detection & inspection priority.", ["YOLO26N", "RDD2022", "PYTORCH"]),
+        ("card_pocketplans.svg", "04", "POCKET PLANS", "APIS & ROUTING", "AI travel itinerary planner with live weather routing.", ["FASTAPI", "GEOAPIFY", "WEATHER"]),
+        ("card_nids.svg", "05", "NETWORK INTRUSION AI", "SECURITY & ML", "ML attack classifier with AI plain explanations.", ["SCIKIT", "RANDOM FOREST", "HF"]),
+        ("card_modis.svg", "06", "DEFORESTATION ML", "REMOTE SENSING", "Satellite telemetry detecting forest cover change.", ["MODIS", "PANDAS", "GEOSPATIAL"]),
+        ("card_noteverse.svg", "07", "NOTEVERSE", "UI & STATE", "Drag-and-drop notes organizer with persistent state.", ["JAVASCRIPT", "DOM", "STORAGE"]),
+        ("card_foodsync.svg", "08", "FOODSYNC / FOODHUB", "SPRING BOOT", "Smart restaurant ordering & billing workflows.", ["JAVA", "SPRING BOOT", "REST"]),
+        ("card_cloak.svg", "09", "INVISIBILITY CLOAK", "COMPUTER VISION", "Real-time color masking & background replacement.", ["PYTHON", "OPENCV", "NUMPY"]),
+        ("card_salary.svg", "10", "SALARY PREDICTOR", "HR ANALYTICS", "Compensation regression engine for empirical roles.", ["STREAMLIT", "PANDAS", "SCIKIT"]),
+        ("card_fitplan.svg", "11", "FITPLAN.AI", "HEALTH ML", "Personalized fitness analytics & health dashboard.", ["JUPYTER", "SCIKIT", "AGILE"]),
+        ("card_keylogger.svg", "12", "KEYLOGGER APP", "SECURITY LAB", "Keystroke telemetry tool capturing events for audit.", ["PYTHON", "PYNPUT", "KALI"]),
+        ("card_nps.svg", "13", "NPS SAATHI", "FINTECH ML", "National Pension Scheme engine for IIT Kanpur.", ["TYPESCRIPT", "PENSION", "FINTECH"]),
+        ("card_drugrecall.svg", "14", "DRUG RECALL MONITOR", "TELEMETRY", "Pharmaceutical recall notification & safety monitor.", ["PYTHON", "REST API", "PHARMA"]),
+        ("card_diabetes.svg", "15", "DIABETES PREDICTOR", "CLINICAL ML", "Diagnostic risk assessment using medical vectors.", ["PYTHON", "SCIKIT", "HEALTH"]),
+        ("card_quiz.svg", "16", "ELOQUENT QUIZ APP", "FRONTEND DEV", "Interactive web quiz applying responsive clean UI.", ["HTML5", "CSS3", "VANILLA JS"]),
+        ("card_cache.svg", "17", "CACHE ANALYSIS", "SYSTEMS LAB", "Cache architecture simulator evaluating LRU in Ripes.", ["RIPES", "LRU CACHE", "ASSEMBLY"]),
+        ("card_pharmacy.svg", "18", "PHARMACY MANAGEMENT", "DATABASE & SQL", "Relational inventory, supplier & sales transaction DBMS.", ["SQL", "RELATIONAL", "DBMS"]),
+        ("card_wireless.svg", "19", "WIRELESS POWER", "HARDWARE & IOT", "Inductive contactless energy transfer model.", ["HARDWARE", "INDUCTIVE", "IOT"]),
     ]
 
+    w, h = 310, 215
     for filename, idx, title, category, blurb, chips in projects:
-        w, h = 480, 220
         chip_xml = ""
-        cx = 30
+        cx = 16
         for c in chips:
-            cw = measure_text(FONT_INTER, c, 9, tracking=0.1) + 18
+            cw = measure_text(FONT_INTER, c, 8, tracking=0.08) + 14
             chip_xml += f"""
-            <rect x="{cx}" y="172" width="{cw}" height="22" rx="11" fill="{COLOR_GREY_CHIP}" stroke="{COLOR_BORDER}" stroke-width="1"/>
-            {text_path(FONT_INTER, c, cx+9, 186, 9, fill=COLOR_WHITE, tracking=0.1)}
+            <rect x="{cx}" y="{126}" width="{cw}" height="20" rx="4" fill="{COLOR_GREY_CHIP}" stroke="{COLOR_BORDER}" stroke-width="0.8"/>
+            {text_path(FONT_INTER, c, cx+7, 140, 8, fill=COLOR_WHITE, tracking=0.08)}
             """
-            cx += cw + 8
+            cx += cw + 6
 
         inner = f"""
-        <rect class="card-hover" x="10" y="10" width="460" height="200" rx="8" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
-        <line x1="10" y1="50" x2="470" y2="50" stroke="{COLOR_BORDER}" stroke-width="1"/>
-        {text_path(FONT_INTER, f"PROJECT // {idx}", 30, 36, 11, fill=COLOR_RED_HOT, tracking=0.15)}
-        {text_path(FONT_INTER, category, 320, 36, 10, fill=COLOR_GREY_MUTED, tracking=0.1)}
+        <rect class="card-hover" x="6" y="6" width="298" height="203" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+        <line x1="6" y1="36" x2="304" y2="36" stroke="{COLOR_BORDER}" stroke-width="1"/>
+        {text_path(FONT_INTER, f"PROJECT // {idx}", 16, 25, 9, fill=COLOR_RED_HOT, tracking=0.15)}
+        {text_path(FONT_INTER, category, 180, 25, 8.5, fill=COLOR_GREY_MUTED, tracking=0.1)}
         
-        {text_path(FONT_ANTON, title, 30, 95, 30, fill=COLOR_WHITE, tracking=0.03)}
-        {text_path(FONT_INTER, blurb, 30, 130, 11, fill=COLOR_GREY_MUTED, tracking=0.03)}
+        {text_path(FONT_ANTON, title, 16, 68, 20, fill=COLOR_WHITE, tracking=0.03)}
+        {text_path(FONT_INTER, blurb, 16, 95, 9, fill=COLOR_GREY_MUTED, tracking=0.03)}
         {chip_xml}
+
+        <!-- Visual action indicators inside card -->
+        <rect x="16" y="165" width="68" height="22" rx="4" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="0.8"/>
+        {text_path(FONT_INTER, "⌥ REPO", 50, 179, 8, fill=COLOR_WHITE, anchor="middle", tracking=0.1)}
+
+        <rect x="90" y="165" width="100" height="22" rx="4" fill="{COLOR_CARD}" stroke="{COLOR_BORDER_HOT}" stroke-width="0.8"/>
+        {text_path(FONT_INTER, "⚡ VERCEL / LIVE", 140, 179, 8, fill=COLOR_RED_HOT, anchor="middle", tracking=0.1)}
         """
         (ASSETS_DIR / "work" / filename).write_text(svg_wrapper(w, h, inner))
         print(f"Generated {filename}")
+
+    # Generate Dedicated Pill Buttons for Repo & Live
+    buttons_work = [
+        ("btn_repo.svg", "⌥ GITHUB REPO", 94, COLOR_BORDER, COLOR_WHITE),
+        ("btn_live.svg", "⚡ VERCEL APP", 96, COLOR_BORDER_HOT, COLOR_RED_HOT),
+    ]
+    for fname, lbl, bw, bc, tc in buttons_work:
+        bh = 26
+        btn_xml = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {bw} {bh}" width="{bw}" height="{bh}">
+  <defs>
+    <style>
+      .btn {{ transition: all 0.2s ease; cursor: pointer; }}
+      .btn:hover {{ stroke: {COLOR_RED_HOT} !important; filter: drop-shadow(0 0 6px rgba(226, 35, 47, 0.7)); }}
+    </style>
+  </defs>
+  <rect class="btn" x="1" y="1" width="{bw-2}" height="{bh-2}" rx="4" fill="{COLOR_CARD}" stroke="{bc}" stroke-width="1"/>
+  {text_path(FONT_INTER, lbl, bw/2, 17, 8.5, fill=tc, anchor="middle", tracking=0.1)}
+</svg>"""
+        (ASSETS_DIR / "work" / fname).write_text(btn_xml)
+        print(f"Generated {fname}")
 
 
 # ==========================================
@@ -522,10 +555,10 @@ def generate_stack():
 
 
 # ==========================================
-# 7. 3D ISOMETRIC SKYLINE (ZERO HEADLINE OVERLAP)
+# 7. 3D ISOMETRIC SKYLINE (PERFECT CLEARANCE & ALIGNED MONTHS)
 # ==========================================
 def generate_skyline():
-    w, h = 1000, 440
+    w, h = 1000, 385
 
     manifest_path = REPO_ROOT / "scripts" / "manifest.json"
     with open(manifest_path) as f:
@@ -537,92 +570,103 @@ def generate_skyline():
     longest_streak = manifest["longest_streak_days"]
 
     header = f"""
-    {text_path(FONT_INTER, "05 // GITHUB LIVING RECORD", 50, 45, 11, fill=COLOR_RED_HOT, tracking=0.15)}
-    {text_path(FONT_ANTON, "AUTHENTIC 3D CONTRIBUTION SKYLINE", 50, 85, 34, fill=COLOR_WHITE, tracking=0.03)}
-    {text_path(FONT_INTER, f"{total_contributions} VERIFIED CONTRIBUTIONS IN 2026 // 36 REPOSITORIES", 50, 112, 11, fill=COLOR_GREY_MUTED, tracking=0.1)}
+    {text_path(FONT_INTER, "05 // GITHUB LIVING RECORD", 50, 38, 11, fill=COLOR_RED_HOT, tracking=0.15)}
+    {text_path(FONT_ANTON, "AUTHENTIC 3D CONTRIBUTION SKYLINE", 50, 75, 32, fill=COLOR_WHITE, tracking=0.03)}
+    {text_path(FONT_INTER, f"{total_contributions} VERIFIED CONTRIBUTIONS IN 2026 // 36 REPOSITORIES", 50, 98, 10.5, fill=COLOR_GREY_MUTED, tracking=0.1)}
     
-    <g transform="translate(680, 25)">
-      <rect class="card-hover" x="0" y="0" width="270" height="78" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
-      {text_path(FONT_INTER, "CURRENT STREAK", 20, 26, 9, fill=COLOR_GREY_MUTED, tracking=0.15)}
-      {text_path(FONT_ANTON, f"{current_streak} DAYS", 20, 58, 28, fill=COLOR_RED_HOT, tracking=0.03)}
-      {text_path(FONT_INTER, f"LONGEST: {longest_streak} DAYS", 130, 56, 10, fill=COLOR_WHITE, tracking=0.1)}
+    <g transform="translate(680, 20)">
+      <rect class="card-hover" x="0" y="0" width="270" height="74" rx="6" fill="{COLOR_CARD}" stroke="{COLOR_BORDER}" stroke-width="1"/>
+      {text_path(FONT_INTER, "CURRENT STREAK", 20, 25, 9, fill=COLOR_GREY_MUTED, tracking=0.15)}
+      {text_path(FONT_ANTON, f"{current_streak} DAYS", 20, 55, 26, fill=COLOR_RED_HOT, tracking=0.03)}
+      {text_path(FONT_INTER, f"LONGEST: {longest_streak} DAYS", 130, 53, 10, fill=COLOR_WHITE, tracking=0.1)}
     </g>
     """
 
-    origin_x = 500
-    origin_y = 290
+    x_start = 75
+    col_w = 16.2
+    tile_w = 7.5
+    tile_h = 3.8
 
     pillars = []
-    tile_w = 12
-    tile_h = 6
     weeks_count = 52
 
     for week_idx in range(weeks_count):
+        base_x = x_start + week_idx * col_w
         for day_idx in range(7):
             idx = week_idx * 7 + day_idx
             if idx >= len(days):
                 continue
-            day_data = days[idx]
-            count = day_data["count"]
+            count = days[idx]["count"]
 
-            iso_x = origin_x + (week_idx - weeks_count/2) * 13 - (day_idx - 3.5) * 13
-            iso_y = origin_y + (week_idx - weeks_count/2) * 6.5 + (day_idx - 3.5) * 6.5
+            cx = base_x - (day_idx - 3) * 4.5
+            cy = 230 + (day_idx - 3) * 8.0
 
             if count == 0:
                 ht = 3
-                top_col = COLOR_CARD
-                side_col = "#0D0D0E"
-                side_col_r = "#080809"
+                top_col = "#151518"
+                side_col = "#0D0D0F"
+                side_col_r = "#08080A"
             elif count <= 2:
-                ht = 16
+                ht = 14
                 top_col = "#720000"
                 side_col = "#450204"
                 side_col_r = "#300102"
             elif count <= 5:
-                ht = 32
+                ht = 26
                 top_col = COLOR_RED_ACCENT
                 side_col = "#650508"
                 side_col_r = "#480305"
             elif count <= 9:
-                ht = 52
+                ht = 42
                 top_col = COLOR_RED_HOT
                 side_col = COLOR_RED_ACCENT
                 side_col_r = "#650508"
             else:
-                ht = 70
-                top_col = "#FF4B4B"
+                ht = 58
+                top_col = "#FF525D"
                 side_col = COLOR_RED_HOT
                 side_col_r = COLOR_RED_ACCENT
 
-            top_p = f"{iso_x},{iso_y - ht} {iso_x + tile_w},{iso_y + tile_h - ht} {iso_x},{iso_y + tile_h*2 - ht} {iso_x - tile_w},{iso_y + tile_h - ht}"
-            left_p = f"{iso_x - tile_w},{iso_y + tile_h - ht} {iso_x},{iso_y + tile_h*2 - ht} {iso_x},{iso_y + tile_h*2} {iso_x - tile_w},{iso_y + tile_h}"
-            right_p = f"{iso_x + tile_w},{iso_y + tile_h - ht} {iso_x},{iso_y + tile_h*2 - ht} {iso_x},{iso_y + tile_h*2} {iso_x + tile_w},{iso_y + tile_h}"
+            top_p = f"{cx},{cy - tile_h - ht} {cx + tile_w},{cy - ht} {cx},{cy + tile_h - ht} {cx - tile_w},{cy - ht}"
+            left_p = f"{cx - tile_w},{cy - ht} {cx},{cy + tile_h - ht} {cx},{cy + tile_h} {cx - tile_w},{cy}"
+            right_p = f"{cx + tile_w},{cy - ht} {cx},{cy + tile_h - ht} {cx},{cy + tile_h} {cx + tile_w},{cy}"
 
             polygon_xml = f"""
             <polygon points="{left_p}" fill="{side_col}"/>
             <polygon points="{right_p}" fill="{side_col_r}"/>
             <polygon points="{top_p}" fill="{top_col}" stroke="{COLOR_BG}" stroke-width="0.5"/>
             """
-            pillars.append((iso_y, polygon_xml))
+            sort_order = day_idx * 100 + week_idx
+            pillars.append((sort_order, polygon_xml))
 
     pillars.sort(key=lambda p: p[0])
     rendered_pillars = "\n".join([p[1] for p in pillars])
+
+    landmark_months = [
+        ("NOV", 0), ("DEC", 3), ("JAN", 7), ("FEB", 12), ("MAR", 16),
+        ("APR", 20), ("MAY", 25), ("JUN", 29), ("JUL", 33), ("AUG", 38),
+        ("SEP", 42), ("OCT", 46), ("NOV", 51)
+    ]
+
+    months_xml = ""
+    for name, wk in landmark_months:
+        mx = x_start + wk * col_w
+        months_xml += f"""
+        <line x1="{mx:.1f}" y1="298" x2="{mx:.1f}" y2="306" stroke="{COLOR_BORDER}" stroke-width="1"/>
+        {text_path(FONT_INTER, name, mx, 325, 9, fill=COLOR_GREY_MUTED, anchor="middle", tracking=0.15)}
+        """
 
     inner = f"""
     {header}
     <g>
       {rendered_pillars}
     </g>
-    {text_path(FONT_INTER, "NOV", 140, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
-    {text_path(FONT_INTER, "JAN", 290, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
-    {text_path(FONT_INTER, "MAR", 440, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
-    {text_path(FONT_INTER, "MAY", 590, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
-    {text_path(FONT_INTER, "JUL", 740, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
-    {text_path(FONT_INTER, "OCT", 880, 420, 9.5, fill=COLOR_GREY_MUTED, tracking=0.15)}
+    <line x1="60" y1="298" x2="940" y2="298" stroke="{COLOR_BORDER}" stroke-width="0.8"/>
+    {months_xml}
     """
     svg = svg_wrapper(w, h, inner)
     (ASSETS_DIR / "activity" / "skyline_3d.svg").write_text(svg)
-    print("Generated skyline_3d.svg")
+    print("Generated skyline_3d.svg with zero overlaps and aligned months")
 
 
 # ==========================================
@@ -827,16 +871,16 @@ def generate_offduty():
 # 13. CLOSING SECTION & BUTTONS
 # ==========================================
 def generate_closing_and_buttons():
-    w, h = 1000, 200
-    t_lets = text_path(FONT_ANTON, "LET'S BUILD", 50, 95, 78, fill="none", stroke=COLOR_WHITE, stroke_width=2.0, tracking=0.03)
-    t_together = text_path(FONT_ANTON, "SOMETHING REAL.", 50, 165, 78, fill=COLOR_RED_HOT, tracking=0.03)
+    w, h = 1000, 240
+    t_lets = text_path(FONT_ANTON, "LET'S BUILD", 50, 115, 70, fill="none", stroke=COLOR_WHITE, stroke_width=2.0, tracking=0.03)
+    t_together = text_path(FONT_ANTON, "SOMETHING REAL.", 50, 192, 70, fill=COLOR_RED_HOT, tracking=0.03)
     inner = f"""
     {text_path(FONT_INTER, "13 // DIRECT COLLABORATIONS", 50, 35, 11, fill=COLOR_RED_HOT, tracking=0.15)}
     {t_lets}
     {t_together}
     """
     (ASSETS_DIR / "closing" / "closing_hero.svg").write_text(svg_wrapper(w, h, inner))
-    print("Generated closing_hero.svg")
+    print("Generated closing_hero.svg with generous vertical line clearance")
 
     buttons = [
         ("btn_resume.svg", "RESUME (PDF)", 160, COLOR_BORDER_HOT, COLOR_RED_HOT),

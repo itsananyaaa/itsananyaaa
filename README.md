@@ -53,7 +53,7 @@
 <br/>
 
 <!-- ================================================================= -->
-<!-- 05 // WORK (100% VISUAL CARDS FOR ALL PROJECTS)                  -->
+<!-- 05 // WORK (100% VISUAL CARDS // 3 PER LINE + REPO & VERCEL LINKS)-->
 <!-- ================================================================= -->
 
 <a href="https://github.com/itsananyaaa">
@@ -62,113 +62,257 @@
 
 <br/><br/>
 
-<table border="0" cellpadding="0" cellspacing="8">
+<table border="0" cellpadding="0" cellspacing="10" width="100%">
+  <!-- ROW 1 -->
   <tr>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/LucraLens_AI">
         <img src="assets/work/card_lucralens.svg" width="100%" alt="LucraLens AI Project">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/LucraLens_AI" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://lucralens-ai.streamlit.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/roadsense-ai">
         <img src="assets/work/card_roadsense.svg" width="100%" alt="RoadSense AI Project">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/roadsense-ai" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://roadsense-ai.vercel.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/PocketPlans">
         <img src="assets/work/card_pocketplans.svg" width="100%" alt="Pocket Plans Project">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/PocketPlans" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://pocketplans.vercel.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-    <td width="50%" align="center">
+  </tr>
+  <!-- ROW 2 -->
+  <tr>
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/AI_Network_Intrusion_System">
         <img src="assets/work/card_nids.svg" width="100%" alt="AI Network Intrusion System Project">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/AI_Network_Intrusion_System" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://ai-network-intrusion-system.streamlit.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/deforestation_detection_system">
         <img src="assets/work/card_modis.svg" width="100%" alt="MODIS Deforestation Detection Project">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/deforestation_detection_system" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://deforestation-detection.vercel.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/NoteVerse">
         <img src="assets/work/card_noteverse.svg" width="100%" alt="NoteVerse Project">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/NoteVerse" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://noteverse.vercel.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
   </tr>
+  <!-- ROW 3 -->
   <tr>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/foodsync">
         <img src="assets/work/card_foodsync.svg" width="100%" alt="FoodSync / FoodHub Project">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/foodsync" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://foodsync.vercel.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/harry_potter_invisibility_cloak">
         <img src="assets/work/card_cloak.svg" width="100%" alt="Harry Potter Invisibility Cloak CV">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/harry_potter_invisibility_cloak" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://github.com/itsananyaaa/harry_potter_invisibility_cloak" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/Employee_Salary_Prediction_System">
         <img src="assets/work/card_salary.svg" width="100%" alt="Employee Salary Prediction ML">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/Employee_Salary_Prediction_System" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://salary-predictor.streamlit.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-    <td width="50%" align="center">
+  </tr>
+  <!-- ROW 4 -->
+  <tr>
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/FitPlan">
         <img src="assets/work/card_fitplan.svg" width="100%" alt="FitPlan.ai Health ML">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/FitPlan" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://fitplan-ai.vercel.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/Keylogger-Application">
         <img src="assets/work/card_keylogger.svg" width="100%" alt="Keylogger Application Security Lab">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/Keylogger-Application" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://github.com/itsananyaaa/Keylogger-Application" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/nps_saathi">
         <img src="assets/work/card_nps.svg" width="100%" alt="NPS Saathi Fintech Project">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/nps_saathi" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://nps-saathi.vercel.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
   </tr>
+  <!-- ROW 5 -->
   <tr>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/drugrecallmonitor">
         <img src="assets/work/card_drugrecall.svg" width="100%" alt="Drug Recall Monitor Telemetry">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/drugrecallmonitor" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://drugrecallmonitor.vercel.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/diabetes_risk_predictor">
         <img src="assets/work/card_diabetes.svg" width="100%" alt="Diabetes Risk Predictor ML">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/diabetes_risk_predictor" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://diabetes-risk.streamlit.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa/Eloquent-Quiz-Application">
         <img src="assets/work/card_quiz.svg" width="100%" alt="Eloquent Quiz Application">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa/Eloquent-Quiz-Application" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://eloquent-quiz.vercel.app" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-    <td width="50%" align="center">
+  </tr>
+  <!-- ROW 6 -->
+  <tr>
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa">
         <img src="assets/work/card_cache.svg" width="100%" alt="Cache Performance Analysis Ripes">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://github.com/itsananyaaa" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa">
         <img src="assets/work/card_pharmacy.svg" width="100%" alt="Pharmacy Management System SQL">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://github.com/itsananyaaa" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
-    <td width="50%" align="center">
+    <td width="33.3%" align="center" valign="top">
       <a href="https://github.com/itsananyaaa">
         <img src="assets/work/card_wireless.svg" width="100%" alt="Wireless Power Transfer Project">
       </a>
+      <p align="center">
+        <a href="https://github.com/itsananyaaa" target="_blank">
+          <img src="assets/work/btn_repo.svg" height="22" alt="GitHub Repo"/>
+        </a> &nbsp;
+        <a href="https://github.com/itsananyaaa" target="_blank">
+          <img src="assets/work/btn_live.svg" height="22" alt="Live Demo / Vercel"/>
+        </a>
+      </p>
     </td>
   </tr>
 </table>
@@ -229,7 +373,7 @@
 
 <img src="assets/offduty/offduty_bento.svg" width="100%" alt="12 // Off-Duty: Bobby the Cat, Freida McFadden Thrillers, Debate Champion, Community Lead">
 
-<br/>
+<br/><br/>
 
 <!-- ================================================================= -->
 <!-- 13 // SAY HI & SOCIALS (WORKING DEDICATED BUTTONS)                -->
@@ -237,7 +381,7 @@
 
 <img src="assets/closing/closing_hero.svg" width="100%" alt="13 // Let's Build Something Real">
 
-<br/>
+<br/><br/>
 
 <p align="center">
   <a href="https://raw.githubusercontent.com/itsananyaaa/itsananyaaa/main/Ananya_Biju_Resume_2026.pdf" target="_blank">
@@ -259,6 +403,8 @@
     <img src="assets/closing/btn_email.svg" height="42" alt="Email">
   </a>
 </p>
+
+<br/>
 
 <img src="assets/hero/marquee_strip.svg" width="100%" alt="Closing Marquee Ticker">
 
