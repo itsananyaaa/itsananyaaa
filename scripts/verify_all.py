@@ -26,6 +26,9 @@ assert len(asset_refs) > 0, "No asset references found in README.md"
 
 all_exist = True
 for ref in set(asset_refs):
+    if ref.startswith("http://") or ref.startswith("https://"):
+        print(f"[REMOTE URL] {ref}")
+        continue
     target = REPO_ROOT / ref
     exists = target.exists()
     status = "OK" if exists else "MISSING"
@@ -65,7 +68,10 @@ assert contrast_grey >= 4.5
 
 print("\n--- 4. FILE SIZE BUDGET VERIFICATION ---")
 hero_size = (REPO_ROOT / "assets/hero/hero_banner.svg").stat().st_size / 1024.0
-portrait_size = (REPO_ROOT / "assets/hero/portrait_duotone.png").stat().st_size / 1024.0
+portrait_file = REPO_ROOT / "assets/hero/portrait_original.png"
+if not portrait_file.exists():
+    portrait_file = REPO_ROOT / "assets/hero/portrait_duotone.png"
+portrait_size = portrait_file.stat().st_size / 1024.0
 
 print(f"Hero Banner SVG: {hero_size:.1f} KB (Budget: <= 800 KB) -> {'PASS' if hero_size <= 800 else 'FAIL'}")
 print(f"Portrait PNG: {portrait_size:.1f} KB (Budget: <= 150 KB) -> {'PASS' if portrait_size <= 150 else 'FAIL'}")

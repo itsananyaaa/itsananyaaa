@@ -14,6 +14,12 @@
 
 <br/>
 
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=itsananyaaa&style=for-the-badge&color=E2232F&labelColor=0B0B0B&label=PROFILE+VIEWS" alt="Profile Views"/>
+</p>
+
+<br/>
+
 <!-- ================================================================= -->
 <!-- 01 // ABOUT BENTO                                                 -->
 <!-- ================================================================= -->
@@ -26,12 +32,28 @@
 <!-- 02 // NUMBERS (VERIFIED METRICS)                                  -->
 <!-- ================================================================= -->
 
-<img src="assets/stats/numbers_row.svg" width="100%" alt="02 // Verified Impact Numbers: 10.0 CGPA, 1 Patent Filed, 1st Runner-Up IIT Kanpur, 7 Internship Programs">
+<img src="assets/stats/numbers_row.svg" width="100%" alt="02 // Verified Impact Numbers: 10.0 CGPA, 1 Patent Filed, 5K+ LinkedIn Network, 7 Internship Programs">
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- 03 // WORK (100% VISUAL CARDS FOR ALL PROJECTS)                  -->
+<!-- 03 // LEADERSHIP & ORGANIZATIONS                                  -->
+<!-- ================================================================= -->
+
+<img src="assets/organizations/orgs_cards.svg" width="100%" alt="03 // Organizations: TinkerHub CCE, Technical Lead @ CODe, Website, Newsletter, Outreach, Magazine Teams">
+
+<br/>
+
+<!-- ================================================================= -->
+<!-- 04 // ACTIVE CLUBS & COMMUNITIES (SLIDING CAROUSEL)               -->
+<!-- ================================================================= -->
+
+<img src="assets/clubs/clubs_sliding.svg" width="100%" alt="04 // Active Clubs & Communities: TinkerHub CCE, CODe, GDG, FOSS, NDLI, Debate, Speech, Game Dev, Science, English Clubs">
+
+<br/>
+
+<!-- ================================================================= -->
+<!-- 05 // WORK (100% VISUAL CARDS FOR ALL PROJECTS)                  -->
 <!-- ================================================================= -->
 
 <a href="https://github.com/itsananyaaa">
@@ -154,50 +176,66 @@
 <br/>
 
 <!-- ================================================================= -->
-<!-- 04 // TECH STACK (100% VISUAL BLOCKS)                             -->
+<!-- 06 // TECH STACK (100% VISUAL BLOCKS)                             -->
 <!-- ================================================================= -->
 
-<img src="assets/stack/stack_grid.svg" width="100%" alt="04 // Technical Proficiencies: Programming Languages, Core CS, Frameworks, Tools, Software Engineering, Areas of Interest">
+<img src="assets/stack/stack_grid.svg" width="100%" alt="06 // Technical Proficiencies: Programming Languages, AI/ML, Data Science, Core CS, Web & Backend, Tools & Leadership">
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- 05 // ACTIVITY SKYLINE (AUTHENTIC 3D ISOMETRIC RECORD)            -->
+<!-- 07 // ACTIVITY SKYLINE (AUTHENTIC 3D ISOMETRIC RECORD)            -->
 <!-- ================================================================= -->
 
-<img src="assets/activity/skyline_3d.svg" width="100%" alt="05 // Authentic 3D Isometric GitHub Contribution Skyline (121 Verified Contributions in 2026)">
+<img src="assets/activity/skyline_3d.svg" width="100%" alt="07 // Authentic 3D Isometric GitHub Contribution Skyline (121 Verified Contributions in 2026)">
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- 06 // WINS & HONOURS (100% CARDS FORMAT)                          -->
+<!-- 08 // WINS & HONOURS (100% CARDS FORMAT)                          -->
 <!-- ================================================================= -->
 
-<img src="assets/wins/wins_wall.svg" width="100%" alt="06 // Key Achievements & Leadership: 1st Prize Ideathon, IIT Kanpur Runner-Up, Patent Filed, GEC Best Performer, Debate Champion">
+<img src="assets/wins/wins_wall.svg" width="100%" alt="08 // Key Achievements & Leadership: 1st Prize Ideathon, IIT Kanpur Runner-Up, Patent Filed, GEC Best Performer, Debate Champion">
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- 07 // TRACK RECORD (FLOWCHART TIMELINE)                           -->
+<!-- 09 // KEY EVENTS COORDINATED (100% CARDS FORMAT)                  -->
 <!-- ================================================================= -->
 
-<img src="assets/timeline/internships_timeline.svg" width="100%" alt="07 // 7 Structured Technical Internship Programs Flowchart">
+<img src="assets/events/events_cards.svg" width="100%" alt="09 // Technical Events Coordinated: IMMERSIVEA 2026, Tech Bingo, VidGenesis, POSH Act Talk">
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- 08 // OFF-DUTY BENTO (CAT BOBBY, READING, DEBATE, ECOSYSTEM)      -->
+<!-- 10 // HACKATHONS, IDEATHONS & CONFERENCES (100% CARDS FORMAT)     -->
 <!-- ================================================================= -->
 
-<img src="assets/offduty/offduty_bento.svg" width="100%" alt="08 // Off-Duty: Bobby the Cat, Freida McFadden Thrillers, Debate Champion, Community Lead">
+<img src="assets/hackathons/hackathons_cards.svg" width="100%" alt="10 // Hackathons, Ideathons & Conferences: PFRDA, ISRO, SIH, Make-a-Ton, SpaceUp, SustainX, YESS">
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- 09 // SAY HI & SOCIALS (WORKING DEDICATED BUTTONS)                -->
+<!-- 11 // TRACK RECORD (FLOWCHART TIMELINE)                           -->
 <!-- ================================================================= -->
 
-<img src="assets/closing/closing_hero.svg" width="100%" alt="09 // Let's Build Something Real">
+<img src="assets/timeline/internships_timeline.svg" width="100%" alt="11 // 7 Structured Technical Internship Programs Flowchart">
+
+<br/>
+
+<!-- ================================================================= -->
+<!-- 12 // OFF-DUTY BENTO (CAT BOBBY, READING, DEBATE, ECOSYSTEM)      -->
+<!-- ================================================================= -->
+
+<img src="assets/offduty/offduty_bento.svg" width="100%" alt="12 // Off-Duty: Bobby the Cat, Freida McFadden Thrillers, Debate Champion, Community Lead">
+
+<br/>
+
+<!-- ================================================================= -->
+<!-- 13 // SAY HI & SOCIALS (WORKING DEDICATED BUTTONS)                -->
+<!-- ================================================================= -->
+
+<img src="assets/closing/closing_hero.svg" width="100%" alt="13 // Let's Build Something Real">
 
 <br/>
 
@@ -214,7 +252,7 @@
   <a href="https://leetcode.com/u/ananyaaaabiju/" target="_blank">
     <img src="assets/closing/btn_leetcode.svg" height="42" alt="LeetCode">
   </a> &nbsp;
-  <a href="https://www.goodreads.com" target="_blank">
+  <a href="https://www.goodreads.com/ananyabiju" target="_blank">
     <img src="assets/closing/btn_goodreads.svg" height="42" alt="Goodreads">
   </a> &nbsp;
   <a href="mailto:ananya.bijuks@gmail.com">

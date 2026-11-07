@@ -14,18 +14,26 @@
       }
       .card-hover {
         transition: stroke 0.25s ease, filter 0.25s ease;
+        cursor: pointer;
       }
       .card-hover:hover {
         stroke: #E2232F !important;
         stroke-width: 1.5px !important;
         filter: drop-shadow(0 0 10px rgba(226, 35, 47, 0.5));
       }
-      .grid-block {
-        transition: fill 0.2s ease, stroke 0.2s ease;
+      .pixel {
+        fill: #0C0C0D;
+        stroke: #161618;
+        stroke-width: 0.5px;
+        transition: fill 0.15s ease, stroke 0.15s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        transform-box: fill-box;
+        transform-origin: center;
       }
-      .grid-block:hover {
-        fill: #2A0407 !important;
-        stroke: #E2232F !important;
+      .pixel:hover {
+        fill: #E2232F !important;
+        stroke: #FF6B75 !important;
+        transform: scale(1.6) !important;
+        filter: drop-shadow(0 0 8px rgba(226, 35, 47, 0.9));
       }
     </style>
     
