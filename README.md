@@ -1,277 +1,213 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,25&height=200&section=header&text=Ananya%20Biju&fontSize=60&fontAlignY=38&animation=fadeIn&fontColor=ffffff&desc=Building%20things%20that%20matter%20%E2%80%94%20with%20code%2C%20curiosity%2C%20and%20way%20too%20much%20coffee&descAlignY=60&descSize=16"/>
+<!-- ================================================================= -->
+<!-- 00 // HERO BANNER                                                 -->
+<!-- ================================================================= -->
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero/hero_banner.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero/hero_banner.svg">
+  <img src="assets/hero/hero_banner.svg" width="100%" alt="Ananya Biju // AI/ML & Systems Engineering // Portfolio Profile">
+</picture>
+
+<img src="assets/hero/marquee_strip.svg" width="100%" alt="Skills and Domains Ticker">
+
+<p align="center">
+  <a href="Ananya_Biju_Resume_2026.pdf"><strong>📄 Download / View Official Resume (PDF)</strong></a> &nbsp;•&nbsp;
+  <a href="https://linkedin.com/in/ananyabiju"><strong>LinkedIn</strong></a> &nbsp;•&nbsp;
+  <a href="https://github.com/itsananyaaa"><strong>GitHub</strong></a> &nbsp;•&nbsp;
+  <a href="https://leetcode.com/u/ananyaaaabiju/"><strong>LeetCode</strong></a> &nbsp;•&nbsp;
+  <a href="mailto:ananya.bijuks@gmail.com"><strong>Email</strong></a>
+</p>
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=9D4EDD&center=true&vCenter=true&width=750&lines=Computer+Science+%40+Christ+College+of+Engineering;5%C3%97+Intern+%7C+Patent+Holder+%7C+IIT+Kanpur+Hackathon+Runner-Up;AI+%2F+ML+%7C+Full-Stack+%7C+Computer+Vision;+Still+debugging+at+2+AM+%F0%9F%8C%99)](https://git.io/typing-svg)
+<!-- ================================================================= -->
+<!-- 01 // ABOUT BENTO                                                 -->
+<!-- ================================================================= -->
+
+<img src="assets/about/about_bento.svg" width="100%" alt="01 // About Bento: Role, Perfect 10.0 CGPA, Languages, and Domains">
 
 <br/>
 
-[![Profile Views](https://komarev.com/ghpvc/?username=itsananyaaa&style=for-the-badge&color=9D4EDD&label=PROFILE+VIEWS)](https://github.com/itsananyaaa)
-[![GitHub followers](https://img.shields.io/github/followers/itsananyaaa?style=for-the-badge&color=9D4EDD&logo=github)](https://github.com/itsananyaaa)
+<!-- ================================================================= -->
+<!-- 02 // NUMBERS (VERIFIED METRICS)                                  -->
+<!-- ================================================================= -->
 
-</div>
+<img src="assets/stats/numbers_row.svg" width="100%" alt="02 // Verified Impact Numbers: 10.0 CGPA, 1 Patent Filed, 1st Runner-Up IIT Kanpur, 7 Internship Programs">
 
----
-
-## `> whoami`
-
-```python
-class Ananya:
-    """
-    Computer Science undergraduate. Builder. Occasional insomniac.
-    Certified coffee-to-code converter since 2024.
-    """
-
-    name       = "Ananya Biju"
-    location   = "Thrissur, Kerala, India 🌴"
-    education  = "B.Tech CSE @ Christ College of Engineering"
-    cgpa       = 10   # yes, really
-    pronouns   = "she/her"
-
-    internships = 5       # and counting
-    patents     = 1       # filed April 2026 🚀
-    hackathons  = "too many to list, not enough to stop"
-
-    current_obsessions = [
-        "AI/ML & Computer Vision",
-        "Full-Stack Development",
-        "Cybersecurity Fundamentals",
-        "That one bug that shouldn't exist but does",
-        "books, books and more books!",
-        "leetcode"
-    ]
-
-    def mission(self) -> str:
-        return "Build technology that solves real problems — not just demo-day magic."
-
-    def fun_fact(self) -> str:
-        return (
-            "I file patents, win hackathons, and collect internships. "
-            "Apparently I also sleep occasionally. Allegedly."
-        )
-```
-
----
-
-## ✦ By the Numbers
-
-<div align="center">
-
-|  | |
-|:---:|:---:|
-| 🏅 **10 / 10 CGPA** | 📜 **Indian Patent Filed (Apr 2026)** |
-| 🥈 **Runner-Up @ IIT Kanpur Hackathon** | 💼 **5× Technical Intern** |
-| 🏆 **Debate Winner (SYNAPSE)** | 🛰️ **Top Performer Intern GECT'26** |
-
-</div>
-
----
-
-## 🛠 Tech Stack
-
-### Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
-
-### AI · ML · Data Science
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-
-### Frameworks & Backend
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
-
-### Tools & Platforms
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white)
-
----
-
-## 💼 Experience
-
-<details>
-<summary><b>🟣 AI/ML Intern — Govt. Engineering College Thrissur (Jun 2026)</b></summary>
-<br/>
-Selected for GECT's Summer Internship Programme 2026. Joining the AI/ML track for hands-on applied research experience.
-</details>
-
-<details>
-<summary><b>🔵 AI/ML Intern — Infosys Springboard 6.0 (Dec 2025)</b></summary>
 <br/>
 
-- Served as **temporary Team Lead** for project group
-- Built **Fitplan.ai** — end-to-end: documentation, backend dev, data preprocessing, visualization, integration & testing
-- Attended mentor-led sessions on Agile methodologies and GitHub workflows
-</details>
+<!-- ================================================================= -->
+<!-- 03 // WORK (FEATURED + PROJECT CARDS)                             -->
+<!-- ================================================================= -->
 
-<details>
-<summary><b>🔴 Cybersecurity Intern — Vodafone/VOIS × Edunet × AICTE (Dec 2025)</b></summary>
+<a href="https://github.com/itsananyaaa">
+  <img src="assets/work/card_guardian_wing.svg" width="100%" alt="Guardian Wing: Collaborative Fleet Intelligence System (Indian Patent Application Filed)">
+</a>
+<p align="left">
+  ↳ <strong><a href="https://github.com/itsananyaaa">Guardian Wing</a></strong> — Collaborative Fleet Intelligence System <em>(Patent App. No. 202641048328)</em>
+</p>
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/itsananyaaa/LucraLens_AI">
+        <img src="assets/work/card_lucralens.svg" width="100%" alt="LucraLens AI Project">
+      </a>
+      <br/>
+      ↳ <a href="https://github.com/itsananyaaa/LucraLens_AI"><strong>itsananyaaa/LucraLens_AI</strong></a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/itsananyaaa/roadsense-ai">
+        <img src="assets/work/card_roadsense.svg" width="100%" alt="RoadSense AI Project">
+      </a>
+      <br/>
+      ↳ <a href="https://github.com/itsananyaaa/roadsense-ai"><strong>itsananyaaa/roadsense-ai</strong></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/itsananyaaa/PocketPlans">
+        <img src="assets/work/card_pocketplans.svg" width="100%" alt="Pocket Plans Project">
+      </a>
+      <br/>
+      ↳ <a href="https://github.com/itsananyaaa/PocketPlans"><strong>itsananyaaa/PocketPlans</strong></a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/itsananyaaa/AI_Network_Intrusion_System">
+        <img src="assets/work/card_nids.svg" width="100%" alt="AI Network Intrusion System Project">
+      </a>
+      <br/>
+      ↳ <a href="https://github.com/itsananyaaa/AI_Network_Intrusion_System"><strong>itsananyaaa/AI_Network_Intrusion_System</strong></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/itsananyaaa/deforestation_detection_system">
+        <img src="assets/work/card_modis.svg" width="100%" alt="MODIS Deforestation Detection Project">
+      </a>
+      <br/>
+      ↳ <a href="https://github.com/itsananyaaa/deforestation_detection_system"><strong>itsananyaaa/deforestation_detection_system</strong></a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/itsananyaaa/NoteVerse">
+        <img src="assets/work/card_noteverse.svg" width="100%" alt="NoteVerse Project">
+      </a>
+      <br/>
+      ↳ <a href="https://github.com/itsananyaaa/NoteVerse"><strong>itsananyaaa/NoteVerse</strong></a>
+    </td>
+  </tr>
+</table>
+
+<p align="left">
+  <strong>COMPLETE GITHUB REPOSITORIES & ENGINEERING WORK:</strong><br/>
+  • <strong><a href="https://github.com/itsananyaaa/foodsync">FoodSync / FoodHub</a></strong> — Smart restaurant management & ordering platform (Java Spring Boot, REST APIs, Thymeleaf)<br/>
+  • <strong><a href="https://github.com/itsananyaaa/harry_potter_invisibility_cloak">Harry Potter Invisibility Cloak</a></strong> — Real-time color masking & background replacement CV (Python, OpenCV, NumPy)<br/>
+  • <strong><a href="https://github.com/itsananyaaa/Employee_Salary_Prediction_System">Employee Salary Predictor</a></strong> — Interactive compensation regression engine (Python, Streamlit, Scikit-learn)<br/>
+  • <strong><a href="https://github.com/itsananyaaa/FitPlan">FitPlan.ai</a></strong> — Health analytics and activity tracking ML engine (Infosys Springboard Project)<br/>
+  • <strong><a href="https://github.com/itsananyaaa/Keylogger-Application">Keylogger Application</a></strong> — Keystroke telemetry & security analysis tool (Python, pynput)<br/>
+  • <strong><a href="https://github.com/itsananyaaa/nps_saathi">NPS Saathi</a></strong> — National pension analytics platform (IIT Kanpur Hackathon Project, TypeScript)<br/>
+  • <strong><a href="https://github.com/itsananyaaa/drugrecallmonitor">Drug Recall Monitor</a></strong> — Real-time pharmaceutical safety monitor (Python)<br/>
+  • <strong><a href="https://github.com/itsananyaaa/diabetes_risk_predictor">Diabetes Risk Predictor</a></strong> — Clinical machine learning risk classification (Python, Streamlit)<br/>
+  • <strong><a href="https://github.com/itsananyaaa/Eloquent-Quiz-Application">Eloquent Quiz Application</a></strong> — Interactive frontend quiz platform (AICTE FWD, HTML, CSS, JS)<br/>
+  • <strong><a href="https://github.com/itsananyaaa">Cache Performance Analysis</a></strong> — Cache simulation & hit/miss analysis using Ripes (LRU, Random, CPI)<br/>
+  • <strong><a href="https://github.com/itsananyaaa">Pharmacy Management System</a></strong> — Relational inventory and supplier DBMS (In Progress, SQL)<br/>
+  • <strong><a href="https://github.com/itsananyaaa">Wireless Power Transfer</a></strong> — Inductive coupling contactless energy transfer hardware model
+</p>
+
 <br/>
 
-- Developed a **keylogger application** and **AI Network Intrusion System** as part of hands-on cybersecurity training
-- Strengthened practical skills using **Kali Linux** and **VirtualBox**
-- Built understanding of system vulnerabilities from both attack and defense perspectives
-</details>
+<!-- ================================================================= -->
+<!-- 04 // TECH STACK (FULL RESUME SPECIFICATION)                      -->
+<!-- ================================================================= -->
 
-<details>
-<summary><b>🟡 Frontend & Web Dev Intern — IBM SkillsBuild × Edunet × AICTE (Aug 2025)</b></summary>
+<img src="assets/stack/stack_grid.svg" width="100%" alt="04 // Technical Skills: Languages, Core CS, Frameworks, and Tools">
+
+<p align="left">
+  <strong>TECHNICAL PROFICIENCIES (RESUME SOURCE):</strong><br/>
+  • <strong>Programming Languages:</strong> Python, Java, C, JavaScript, HTML, CSS, SQL, Shell Scripting<br/>
+  • <strong>Core Computer Science:</strong> Data Structures & Algorithms, Object-Oriented Programming, Problem Solving, Operating Systems, DBMS Concepts<br/>
+  • <strong>Frameworks & Libraries:</strong> React.js, Bootstrap, Java Spring Boot, TensorFlow, NumPy, OpenCV, FastAPI, Pandas, Scikit-learn, Streamlit<br/>
+  • <strong>Tools & Platforms:</strong> Git & GitHub, Linux/Unix Shell, VS Code, Overleaf, Postman, VirtualBox, Kali Linux<br/>
+  • <strong>Software Engineering:</strong> Debugging, Code Optimization, Version Control, Writing Clean & Maintainable Code, Agile Methodologies, Team Leadership<br/>
+  • <strong>Areas of Focus:</strong> AI/ML, Computer Vision, Software Engineering, Distributed Systems, Cybersecurity, Cloud, Blockchain
+</p>
+
 <br/>
 
-- Hands-on with HTML, CSS, JavaScript, responsive design, and clean coding practices
-- Built a fully functional **Quiz Application** as capstone — applying real-world UI/UX and frontend dev concepts
-</details>
+<!-- ================================================================= -->
+<!-- 05 // ACTIVITY SKYLINE (AUTHENTIC 365-DAY GITHUB RECORD)         -->
+<!-- ================================================================= -->
 
-<details>
-<summary><b>🟢 AI/ML Intern — Shell × Edunet × AICTE (Jul 2025)</b></summary>
+<img src="assets/activity/skyline_3d.svg" width="100%" alt="05 // Authentic 3D Isometric GitHub Contribution Skyline (121 Verified Contributions in 2026)">
+
 <br/>
 
-- Applied AI models to **sustainability-driven** problem statements aligned with SDGs
-- Designed and implemented a **Deforestation Detection System** using MODIS satellite data
-</details>
+<!-- ================================================================= -->
+<!-- 06 // WINS & HONOURS                                              -->
+<!-- ================================================================= -->
 
-<details>
-<summary><b>🔵 AI/ML Intern — IBM SkillsBuild × Edunet × AICTE (Jun 2025)</b></summary>
+<img src="assets/wins/wins_wall.svg" width="100%" alt="06 // Wins & Honours: 1st Prize Ideathon, IIT Kanpur Runner-Up, Patent Filed, GEC Best Performer, Debate Champion">
+
+<p align="left">
+  <strong>KEY ACHIEVEMENTS & LEADERSHIP:</strong><br/>
+  🥇 <strong>1st Prize Winner</strong> — Design for Her Ideathon (2026)<br/>
+  🥈 <strong>First Runner-Up</strong> — Pension Fund Regulatory and Development Authority (PFRDA) Hackathon @ IIT Kanpur (March 2026)<br/>
+  📜 <strong>Indian Patent Application Filed</strong> — <em>Guardian Wing: Collaborative Fleet Intelligence System</em> (App. No. 202641048328, April 2026)<br/>
+  🌟 <strong>Best Performer Award</strong> — Summer Internship Program ’26 @ Government Engineering College (GEC), Thrissur (June 2026)<br/>
+  🏆 <strong>Winner</strong> — SYNAPSE Debate Competition (January 2026)<br/>
+  🥈 <strong>Second Prize</strong> — Argument Arena Debate Competition (February 2025)<br/>
+  🛡️ <strong>Shortlisted</strong> — Smart India Hackathon (SIH 2025) Internal Round (October 2025)<br/>
+  🥉 <strong>3rd Prize</strong> — Micropresentation Competition (August 2025)<br/>
+  ⚡ <strong>Technical Lead</strong> — CODe (Department of Computer Science & Engineering Association)
+</p>
+
 <br/>
 
-- Hands-on in data preprocessing, model training, and evaluation
-- Designed an **Employee Salary Prediction System** using ML techniques
-</details>
+<!-- ================================================================= -->
+<!-- 07 // TRACK RECORD (7 INTERNSHIP PROGRAMS)                         -->
+<!-- ================================================================= -->
 
-<details>
-<summary><b>⚪ Foundations of AI Intern — Microsoft × Edunet × AICTE (Apr 2025)</b></summary>
+<img src="assets/timeline/internships_timeline.svg" width="100%" alt="07 // 7 Technical Internship Programs Timeline with In-Box Alignment">
+
+<p align="left">
+  <strong>STRUCTURED TECHNICAL INTERNSHIPS:</strong><br/>
+  1. <strong>Infosys Springboard Virtual Internship 6.0 & 7.0</strong> (Dec 2025, July 2026) — AI/ML, Data Visualization, FitPlan.ai Capstone (Team Lead)<br/>
+  2. <strong>GEC Thrissur Summer Internship</strong> (June 2026) — Applied AI/ML & Compensation Analytics (<em>Awarded Best Performer</em>)<br/>
+  3. <strong>Vodafone & VOIS Idea Foundation x Edunet x AICTE</strong> (Dec 2025) — Cybersecurity, Keylogger & Network Intrusion Systems<br/>
+  4. <strong>IBM SkillsBuild x Edunet x AICTE</strong> (Aug 2025) — Frontend & Web Development, Interactive UI/UX Quiz Application<br/>
+  5. <strong>Shell x Edunet x AICTE</strong> (July 2025) — Artificial Intelligence & Machine Learning, MODIS Deforestation Detection (SDG Aligned)<br/>
+  6. <strong>IBM SkillsBuild x Edunet x AICTE</strong> (June 2025) — AI & Machine Learning, Employee Salary Prediction System<br/>
+  7. <strong>Microsoft x Edunet x AICTE</strong> (April 2025) — Foundations of AI, Azure Custom Vision, Neural Network Chatbots
+</p>
+
 <br/>
 
-- Built and evaluated supervised & unsupervised ML models (regression + classification)
-- Applied Computer Vision and **Generative AI** concepts via Azure Custom Vision
-- Developed an **AI-based chatbot** as capstone using deep learning fundamentals
-</details>
+<!-- ================================================================= -->
+<!-- 08 // OFF-DUTY BENTO (CAT BOBBY, READING, DEBATE, COMMUNITY)      -->
+<!-- ================================================================= -->
 
----
+<img src="assets/offduty/offduty_bento.svg" width="100%" alt="08 // Off-Duty: Bobby the Cat, Freida McFadden Thrillers, Debate Champion, Community Lead">
 
-## 🚀 Projects
+<br/>
 
-| Project | Stack | Highlights |
-|---|---|---|
-| 🛡️ **Guardian Wing** *(Patent Filed)* | AI, Fleet Systems | Collaborative Fleet Intelligence — Indian Patent App. No. 202641048328 |
-| 🗺️ **Pocket Plans** | Python, FastAPI, Geoapify, OpenWeatherMap | AI travel roadmap generator — mood-based, weather-aware, Google Maps linked |
-| 🔒 **AI Network Intrusion System** | Python, Scikit-learn, Streamlit, HuggingFace | ML-powered attack detection with AI-driven explanations |
-| 🌱 **Deforestation Detection** | Python, Pandas, Scikit-learn, MODIS | Satellite-data ML pipeline for environmental monitoring |
-| 🍽️ **FoodHub** | Java Spring Boot, Thymeleaf, REST APIs | Full-stack restaurant ordering system — led team, built & integrated end-to-end |
-| 🧙 **Harry Potter Invisibility Cloak** | Python, OpenCV, NumPy | Real-time computer vision — color masking & background replacement |
-| 💊 **Pharmacy Management System** | SQL, DBMS | Inventory, sales & supplier system — *in progress* |
-| 📝 **NoteVerse** | HTML, CSS, JavaScript | Clean notes app with task tracking — responsive, minimal, fast |
-| 💰 **Employee Salary Predictor** | Python, Streamlit, Scikit-learn | Interactive ML web app for HR analytics |
-| ⌨️ **Keylogger App** | Python, pynput | Cybersecurity training project — captures and stores keyboard events |
+<!-- ================================================================= -->
+<!-- 09 // SAY HI & SOCIALS                                            -->
+<!-- ================================================================= -->
 
----
+<a href="https://linkedin.com/in/ananyabiju">
+  <img src="assets/closing/closing_hero.svg" width="100%" alt="09 // Let's Build Something Real: Resume PDF, LinkedIn, GitHub, LeetCode, Email">
+</a>
 
-## 📊 GitHub Stats
+<p align="center">
+  <a href="Ananya_Biju_Resume_2026.pdf"><strong>📄 Official Resume (PDF)</strong></a> &nbsp;•&nbsp;
+  <a href="https://linkedin.com/in/ananyabiju"><strong>LinkedIn</strong></a> &nbsp;•&nbsp;
+  <a href="https://github.com/itsananyaaa"><strong>GitHub</strong></a> &nbsp;•&nbsp;
+  <a href="https://leetcode.com/u/ananyaaaabiju/"><strong>LeetCode</strong></a> &nbsp;•&nbsp;
+  <a href="mailto:ananya.bijuks@gmail.com"><strong>Email</strong></a>
+</p>
 
-<div align="center">
-
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=itsananyaaa&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true"/>
-<img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=itsananyaaa&theme=tokyonight&hide_border=true"/>
-
-<br/><br/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=itsananyaaa&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"/>
-
-</div>
-
----
-
-## 🏆 Achievements & Community
-
-```
-📜 Indian Patent Filed — "Guardian Wing: Collaborative Fleet Intelligence System" (Apr 2026)
-🥈 First Runners Up — PFRDA Hackathon @ IIT Kanpur (Mar 2026)
-🛡️ Shortlisted — Smart India Hackathon 2025
-🏆 Winner — SYNAPSE Debate Competition (Jan 2026)
-🥈 2nd Place — Argument Arena Debate (Feb 2025)
-🥉 3rd Prize — Micropresentation Competition (Aug 2025)
-🔟 Top 10 — Fortress of Facts Engineering Quiz (Feb 2025)
-
-🎯 Events Coordinated:
-   • Perception vs Potential — Invited Talk (Mar 2026)
-   • IMMERSIVEA '26 — VR Simulation Event (Feb 2026)
-   • Tech Bingo, VidGenesis — Techletics '26 (Jan 2026)
-
-🌍 Conferences Attended:
-   • SpaceUp Unconference, CUSAT (Jan 2026)
-   • BeachHack Season 7 — Ocean Panel (Jan 2026)
-   • UST GenCyS 2025 Cybersecurity Conference (Aug 2025)
-   • SustainX Sustainability Conference, IGBC & CUSAT (Mar 2025)
-   • Young Innovators Program, K-DISC (Jan 2025)
-
-📚 Certifications & Courses:
-   • Python for Data Science — NPTEL Elite Status
-   • AI, CV, NLP, GenAI, AI Fluency — Microsoft Learn
-   • Infosys Springboard — AI, NLP, Data Science, Soft Skills
-   • Software Engineering Job Simulation — Accenture
-   • Cyber Security Analyst Job Simulation — Deloitte
-   • Digital 101 (30 hrs) — Gold Category
-   • Java Spring Boot — iPlus Solutions
-```
-
----
-
-## 🌐 Let's Connect
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ananya.bijuks@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ananyabiju)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/itsananyaaa)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/ananyaaaabiju/)
-
-</div>
-
----
-
-## ⚡ Current Runtime
-
-```python
-while alive:
-    learn()          # mandatory
-    build()          # obsession
-    break_things()   # inevitable
-    fix_things()     # character development
-    drink_coffee()   # non-negotiable
-    repeat()         # feature, not bug
-```
-
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,25&height=120&section=footer"/>
-
-**"The best way to predict the future is to build it."**
-
-*Open to internships, collaborations, and conversations about ideas that shouldn't work but somehow do.*
-
-⭐ If something here sparked your interest, come on — let's talk!
+<img src="assets/hero/marquee_strip.svg" width="100%" alt="Closing Marquee Ticker">
 
 </div>
