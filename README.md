@@ -379,7 +379,7 @@
 <!-- 13 // SAY HI & SOCIALS (WORKING DEDICATED BUTTONS)                -->
 <!-- ================================================================= -->
 
-<img src="assets/closing/closing_hero.svg" width="100%" alt="13 // Let's Build Something Real">
+<img src="assets/closing/closing_hero.svg" width="100%" alt="13 // Let's Build Something Real!">
 
 <br/><br/>
 
